@@ -1,0 +1,13 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3854155799	Play_footsteps			\Default Work Unit\Play_footsteps	
+
+Effect plug-ins	ID	Name	Type				Notes
+	383180350	Compressor (Custom)	Wwise Compressor			
+	461348081	Parametric EQ (Custom)	Wwise Parametric EQ			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	170846438	BootsSteps_2	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Mac\SFX\BootsSteps_2_8843C7A6.wem		\Actor-Mixer Hierarchy\TransferUnit\footsteps\BootsSteps_2		139468
+	984782743	BootsSteps_1	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Mac\SFX\BootsSteps_1_9353A7F2.wem		\Actor-Mixer Hierarchy\TransferUnit\footsteps\BootsSteps_1		75272
+	1042045071	BootsSteps_3	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Mac\SFX\BootsSteps_3_C2C8EF14.wem		\Actor-Mixer Hierarchy\TransferUnit\footsteps\BootsSteps_3		102088
+	1071686390	BootsSteps_4	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Mac\SFX\BootsSteps_4_5B1C5FD1.wem		\Actor-Mixer Hierarchy\TransferUnit\footsteps\BootsSteps_4		107076
+

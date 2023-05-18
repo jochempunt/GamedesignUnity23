@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{069DF349-A3F7-44FF-AFFE-5AAB223664FD}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{069DF349-A3F7-44FF-AFFE-5AAB223664FD}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_footsteps" ID="{7534040C-6699-41CC-8533-84FF9CAFF8AF}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="8"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{8C33161C-A42C-4B11-BD8B-2A8A351ED493}" ShortID="1072262294">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="footsteps" ID="{97928454-9BCB-489C-91BD-88A25E43B958}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

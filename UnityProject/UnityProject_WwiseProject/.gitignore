@@ -1,0 +1,11 @@
+# Wwise
+.backup*
+.cache*
+*.akd
+*.prof
+*.validationcache
+*.wsettings
+AkWwiseProjectData.asset
+IncrementalSoundBankData.xml
+PluginInfo.xml
+SoundbanksInfo.xml
