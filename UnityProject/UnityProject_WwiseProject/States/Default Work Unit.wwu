@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{742B5F8A-80CD-49AC-931F-2060E98CE498}" SchemaVersion="110">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{742B5F8A-80CD-49AC-931F-2060E98CE498}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{742B5F8A-80CD-49AC-931F-2060E98CE498}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="TimeDirection" ID="{2386AC03-9D55-4BDA-A24E-3CBA160F94CF}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.2"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{DB4683F4-5C45-421A-9C43-06063B5CF5C2}"/>
+						<State Name="Forwards" ID="{EED17E86-F367-4370-92C8-8A0C6FB4BDB0}"/>
+						<State Name="Backwards" ID="{72FBAE06-3930-45FE-B1EA-AFBE28C0182F}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

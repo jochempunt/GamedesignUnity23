@@ -280,9 +280,37 @@
 												<MediaID ID="153254124"/>
 											</MediaIDList>
 										</AudioFileSource>
+										<AudioFileSource Name="Voice,Male,Screamsx3_5s_01" ID="{1901CA23-3426-4F7C-9FA0-8E0BD54196FC}">
+											<Language>SFX</Language>
+											<AudioFile>Voice,Male,Screamsx3_5s.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="153254124"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="TimeDirection" ID="{2386AC03-9D55-4BDA-A24E-3CBA160F94CF}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Forwards" ID="{EED17E86-F367-4370-92C8-8A0C6FB4BDB0}"/>
+												<CustomState Name="" ID="{A8401C39-00F1-41AD-932A-B25AD69B64C1}" ShortID="545961645"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Backwards" ID="{72FBAE06-3930-45FE-B1EA-AFBE28C0182F}"/>
+												<CustomState Name="" ID="{A40B28B2-6028-4281-95F3-A472299A9CF3}" ShortID="612295937">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 									<ActiveSourceList>
-										<ActiveSource Name="Voice,Male,Screamsx3_5s" ID="{E781A0C0-E084-4BD5-9E3F-F67F94967E25}" Platform="Linked"/>
+										<ActiveSource Name="Voice,Male,Screamsx3_5s_01" ID="{1901CA23-3426-4F7C-9FA0-8E0BD54196FC}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Voice,Male,Screams,Falling_reverse" ID="{A7E3E380-241F-4EAC-990C-9459DF320B4F}" ShortID="478392483">
@@ -316,9 +344,37 @@
 												<MediaID ID="73597863"/>
 											</MediaIDList>
 										</AudioFileSource>
+										<AudioFileSource Name="Voice,Male,Screams,Falling_reverse_5s_01" ID="{569973C7-CC2A-4F06-ACE3-F51AE1F6A336}">
+											<Language>SFX</Language>
+											<AudioFile>Voice,Male,Screams,Falling_reverse_5s.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="73597863"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="TimeDirection" ID="{2386AC03-9D55-4BDA-A24E-3CBA160F94CF}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Forwards" ID="{EED17E86-F367-4370-92C8-8A0C6FB4BDB0}"/>
+												<CustomState Name="" ID="{4564F848-184E-42D4-9FAB-0172B4CA4568}" ShortID="409662005">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Backwards" ID="{72FBAE06-3930-45FE-B1EA-AFBE28C0182F}"/>
+												<CustomState Name="" ID="{0639A890-E404-4249-80E5-16A8EC7FDB57}" ShortID="926843822"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 									<ActiveSourceList>
-										<ActiveSource Name="Voice,Male,Screams,Falling_reverse_5s" ID="{BBDCDC8A-B35E-4761-85AC-E929771F6778}" Platform="Linked"/>
+										<ActiveSource Name="Voice,Male,Screams,Falling_reverse_5s_01" ID="{569973C7-CC2A-4F06-ACE3-F51AE1F6A336}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -356,9 +412,37 @@
 												<MediaID ID="239731172"/>
 											</MediaIDList>
 										</AudioFileSource>
+										<AudioFileSource Name="VoiceClipFemale_Reverse_5s_01" ID="{A0DFE8FA-C999-4C42-8CB5-3276879AED7B}">
+											<Language>SFX</Language>
+											<AudioFile>VoiceClipFemale_Reverse_5s.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="239731172"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="TimeDirection" ID="{2386AC03-9D55-4BDA-A24E-3CBA160F94CF}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Forwards" ID="{EED17E86-F367-4370-92C8-8A0C6FB4BDB0}"/>
+												<CustomState Name="" ID="{80BA11D7-CDE7-4117-BCCD-1E6A013F2A45}" ShortID="269269303">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Backwards" ID="{72FBAE06-3930-45FE-B1EA-AFBE28C0182F}"/>
+												<CustomState Name="" ID="{57A7EBE4-AF1D-48E6-8861-D0B6CE959883}" ShortID="648744555"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 									<ActiveSourceList>
-										<ActiveSource Name="VoiceClipFemale_Reverse_5s" ID="{9981F9AF-5135-492D-89EE-0458858AD06C}" Platform="Linked"/>
+										<ActiveSource Name="VoiceClipFemale_Reverse_5s_01" ID="{A0DFE8FA-C999-4C42-8CB5-3276879AED7B}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="VoiceClipFemale_S08CT_270(1)" ID="{C2EB3E0D-8C76-4FE2-A76E-679A588A9104}" ShortID="511288463">
@@ -399,9 +483,37 @@
 												<MediaID ID="247336597"/>
 											</MediaIDList>
 										</AudioFileSource>
+										<AudioFileSource Name="VoiceClipFemale_5s_01" ID="{5753A9EA-A5F4-438C-B654-A4732C2CC628}">
+											<Language>SFX</Language>
+											<AudioFile>VoiceClipFemale_5s.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="247336597"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="TimeDirection" ID="{2386AC03-9D55-4BDA-A24E-3CBA160F94CF}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Forwards" ID="{EED17E86-F367-4370-92C8-8A0C6FB4BDB0}"/>
+												<CustomState Name="" ID="{FF4FABB6-08BF-4ABD-8058-58A85A170949}" ShortID="416806798"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Backwards" ID="{72FBAE06-3930-45FE-B1EA-AFBE28C0182F}"/>
+												<CustomState Name="" ID="{31D8D9B0-9654-4A38-854E-68685F764A6B}" ShortID="309004442">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 									<ActiveSourceList>
-										<ActiveSource Name="VoiceClipFemale_5s" ID="{71F98645-4099-48C9-B58F-882703E5BDE8}" Platform="Linked"/>
+										<ActiveSource Name="VoiceClipFemale_5s_01" ID="{5753A9EA-A5F4-438C-B654-A4732C2CC628}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

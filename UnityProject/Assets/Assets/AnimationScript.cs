@@ -12,7 +12,7 @@ public class AnimationScript : MonoBehaviour
     public AK.Wwise.Event playEvent;
     public AK.Wwise.Event pauseEvent;
     public AK.Wwise.Event resumeEvent;
-    public AK.Wwise.Event seekEvent;
+
 
     private GameObject bubble;
    

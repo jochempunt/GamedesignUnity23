@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d0b23bcf5bd1b4b9d617839c74e31a, type: 3}
+  m_Name: 6E3AFDD3-C1AF-46A8-9771-1A28D370F47A
+  m_EditorClassIdentifier: 
+  objectName: Resume_VoiceClipFemale_02
+  id: 3435969486
+  guid: 6E3AFDD3-C1AF-46A8-9771-1A28D370F47A

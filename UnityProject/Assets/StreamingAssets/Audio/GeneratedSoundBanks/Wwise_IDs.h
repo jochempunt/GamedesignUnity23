@@ -13,8 +13,30 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PAUSE_VOICE_MALE = 701998974U;
+        static const AkUniqueID PAUSE_VOICECLIPFEMALE = 968487436U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
+        static const AkUniqueID PLAY_VOICE_MALE = 1338641808U;
+        static const AkUniqueID PLAY_VOICECLIPFEMALE = 858333638U;
+        static const AkUniqueID RESUME_VOICE_MALE = 3779043801U;
+        static const AkUniqueID RESUME_VOICECLIPFEMALE_02 = 3435969486U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace TIMEDIRECTION
+        {
+            static const AkUniqueID GROUP = 3151571169U;
+
+            namespace STATE
+            {
+                static const AkUniqueID BACKWARDS = 3876169137U;
+                static const AkUniqueID FORWARDS = 1058227519U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace TIMEDIRECTION
+
+    } // namespace STATES
 
     namespace BANKS
     {

@@ -1,12 +1,36 @@
 Event	ID	Name			Wwise Object Path	Notes
+	701998974	Pause_Voice_Male			\Default Work Unit\Animations\Man_Falling\Pause_Voice_Male	
+	858333638	Play_VoiceClipFemale			\Default Work Unit\Animations\Woman_Standing\Play_VoiceClipFemale	
+	968487436	Pause_VoiceClipFemale			\Default Work Unit\Animations\Woman_Standing\Pause_VoiceClipFemale	
+	1338641808	Play_Voice_Male			\Default Work Unit\Animations\Man_Falling\Play_Voice_Male	
+	3435969486	Resume_VoiceClipFemale_02			\Default Work Unit\Animations\Woman_Standing\Resume_VoiceClipFemale_02	
+	3779043801	Resume_Voice_Male			\Default Work Unit\Animations\Man_Falling\Resume_Voice_Male	
 	3854155799	Play_footsteps			\Default Work Unit\Play_footsteps	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3151571169	TimeDirection			\Default Work Unit\TimeDirection	
+
+State	ID	Name	State Group			Notes
+	748895195	None	TimeDirection			
+	1058227519	Forwards	TimeDirection			
+	3876169137	Backwards	TimeDirection			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	269269303	Forwards	TimeDirection	\Actor-Mixer Hierarchy\TransferUnit\Animations\Woman-Standing\VoiceClipFemale_Reverse		
+	309004442	Backwards	TimeDirection	\Actor-Mixer Hierarchy\TransferUnit\Animations\Woman-Standing\VoiceClipFemale_S08CT_270(1)		
+	409662005	Forwards	TimeDirection	\Actor-Mixer Hierarchy\TransferUnit\Animations\Man-Falling\Voice,Male,Screams,Falling_reverse		
+	612295937	Backwards	TimeDirection	\Actor-Mixer Hierarchy\TransferUnit\Animations\Man-Falling\Voice,Male,Screams,Falling,x3		
 
 Effect plug-ins	ID	Name	Type				Notes
 	383180350	Compressor (Custom)	Wwise Compressor			
 	461348081	Parametric EQ (Custom)	Wwise Parametric EQ			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	73597863	Voice,Male,Screams,Falling_reverse	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\Voice,Male,Screams,Falling_reverse_5s_10C4C929.wem		\Actor-Mixer Hierarchy\TransferUnit\Animations\Man-Falling\Voice,Male,Screams,Falling_reverse		960096
+	153254124	Voice,Male,Screams,Falling,x3	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\Voice,Male,Screamsx3_5s_10C4C929.wem		\Actor-Mixer Hierarchy\TransferUnit\Animations\Man-Falling\Voice,Male,Screams,Falling,x3		960096
 	170846438	BootsSteps_2	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\BootsSteps_2_8843C7A6.wem		\Actor-Mixer Hierarchy\TransferUnit\footsteps\BootsSteps_2		139468
+	239731172	VoiceClipFemale_Reverse	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\VoiceClipFemale_Reverse_5s_10C4C929.wem		\Actor-Mixer Hierarchy\TransferUnit\Animations\Woman-Standing\VoiceClipFemale_Reverse		960096
+	247336597	VoiceClipFemale_S08CT_270(1)	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\VoiceClipFemale_5s_10C4C929.wem		\Actor-Mixer Hierarchy\TransferUnit\Animations\Woman-Standing\VoiceClipFemale_S08CT_270(1)		960096
 	984782743	BootsSteps_1	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\BootsSteps_1_9353A7F2.wem		\Actor-Mixer Hierarchy\TransferUnit\footsteps\BootsSteps_1		75272
 	1042045071	BootsSteps_3	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\BootsSteps_3_C2C8EF14.wem		\Actor-Mixer Hierarchy\TransferUnit\footsteps\BootsSteps_3		102088
 	1071686390	BootsSteps_4	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\BootsSteps_4_5B1C5FD1.wem		\Actor-Mixer Hierarchy\TransferUnit\footsteps\BootsSteps_4		107076

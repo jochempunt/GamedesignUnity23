@@ -18,6 +18,154 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="Animations" ID="{021FD6E7-A885-471B-8599-D14101FAF16A}" ShortID="790433243">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Folder Name="Man_Falling" ID="{C9ACC67A-ADAD-4D81-8914-53B3E1B893FC}" ShortID="455006225">
+							<ChildrenList>
+								<Event Name="Play_Voice_Male" ID="{68C3F705-2ECA-41B7-8A52-D209300A811C}">
+									<ChildrenList>
+										<Action Name="" ID="{50316DB7-F7DC-400B-B1B9-D9A472BCB228}" ShortID="668548860">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Voice,Male,Screams,Falling,x3" ID="{602D0B1D-B0F7-428D-8234-591C7F586042}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{B6D44565-9658-43E6-8A39-F2C3FB581999}" ShortID="240533802">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Voice,Male,Screams,Falling_reverse" ID="{A7E3E380-241F-4EAC-990C-9459DF320B4F}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Pause_Voice_Male" ID="{FC84F155-13AE-45F3-B40D-92D9C9178B1A}">
+									<ChildrenList>
+										<Action Name="" ID="{7ABE56AA-836E-433B-9FA4-EAA7D26F49ED}" ShortID="686190796">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="7"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Voice,Male,Screams,Falling,x3" ID="{602D0B1D-B0F7-428D-8234-591C7F586042}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{D367E504-E384-4E4F-B772-E668B4BFA77E}" ShortID="580162818">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="7"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Voice,Male,Screams,Falling_reverse" ID="{A7E3E380-241F-4EAC-990C-9459DF320B4F}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Resume_Voice_Male" ID="{F17153F3-EB6F-4A51-BDB7-FD339CDA8D25}">
+									<ChildrenList>
+										<Action Name="" ID="{51DF0CA3-3779-4ED2-ABE2-9895F9BF109F}" ShortID="623082530">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="9"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Voice,Male,Screams,Falling,x3" ID="{602D0B1D-B0F7-428D-8234-591C7F586042}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{15FA0A77-F03C-4F76-9F6D-A19986596A6D}" ShortID="34556192">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="9"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Voice,Male,Screams,Falling_reverse" ID="{A7E3E380-241F-4EAC-990C-9459DF320B4F}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Woman_Standing" ID="{6EB457B8-1960-4227-A3D8-BC3FA539310E}" ShortID="914888869">
+							<ChildrenList>
+								<Event Name="Play_VoiceClipFemale" ID="{32F248A0-A36D-49C2-94F4-9FDEA37BA630}">
+									<ChildrenList>
+										<Action Name="" ID="{8EEF9705-5871-4302-A3D7-500D6ED06B0D}" ShortID="125542972">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="VoiceClipFemale_Reverse" ID="{96556D5A-C3FD-4B74-B482-4E0B3A11E9B9}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{A4728898-34D6-4212-85CC-5818C8A63C71}" ShortID="387008789">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="VoiceClipFemale_S08CT_270(1)" ID="{C2EB3E0D-8C76-4FE2-A76E-679A588A9104}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Pause_VoiceClipFemale" ID="{69585CF9-FA11-4C54-B406-0C0A0A9D3D47}">
+									<ChildrenList>
+										<Action Name="" ID="{EFCEC8C1-F19F-4532-8E80-29849AEB3E9C}" ShortID="548855038">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="7"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="VoiceClipFemale_Reverse" ID="{96556D5A-C3FD-4B74-B482-4E0B3A11E9B9}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{FF834598-1B76-4F80-B5C8-0780079C2100}" ShortID="807258712">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="7"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="VoiceClipFemale_S08CT_270(1)" ID="{C2EB3E0D-8C76-4FE2-A76E-679A588A9104}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Resume_VoiceClipFemale_02" ID="{6E3AFDD3-C1AF-46A8-9771-1A28D370F47A}">
+									<ChildrenList>
+										<Action Name="" ID="{68A0DBED-A46B-43DD-B412-18288A83BFD4}" ShortID="683723168">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="9"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="VoiceClipFemale_Reverse" ID="{96556D5A-C3FD-4B74-B482-4E0B3A11E9B9}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{CD783FB3-590F-46ED-8FAA-AE323C662F5D}" ShortID="808802391">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="9"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="VoiceClipFemale_S08CT_270(1)" ID="{C2EB3E0D-8C76-4FE2-A76E-679A588A9104}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

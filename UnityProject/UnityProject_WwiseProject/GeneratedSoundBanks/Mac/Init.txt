@@ -1,3 +1,11 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	3151571169	TimeDirection			\Default Work Unit\TimeDirection	
+
+State	ID	Name	State Group			Notes
+	748895195	None	TimeDirection			
+	1058227519	Forwards	TimeDirection			
+	3876169137	Backwards	TimeDirection			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
