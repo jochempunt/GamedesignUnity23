@@ -22,7 +22,7 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-8</Value>
+								<Value>8</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -47,6 +47,17 @@
 									<PropertyList>
 										<Property Name="Ratio" Type="Real32" Value="8.2"/>
 										<Property Name="Threshold" Type="Real32" Value="-35.6"/>
+									</PropertyList>
+								</Effect>
+							</Custom>
+						</Reference>
+						<Reference Name="Effect2">
+							<Custom>
+								<Effect Name="RoomVerb (Custom)" ID="{4213EC4C-B10F-4868-AACF-D0336FB55A45}" ShortID="699616293" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+									<PropertyList>
+										<Property Name="DryLevel" Type="Real32" Value="-10"/>
+										<Property Name="ERPattern" Type="int32" Value="14"/>
+										<Property Name="ReverbLevel" Type="Real32" Value="-30"/>
 									</PropertyList>
 								</Effect>
 							</Custom>
@@ -276,9 +287,14 @@
 																						</PropertyList>
 																						<PointList>
 																							<Point>
-																								<XPos>0</XPos>
+																								<XPos>0.5</XPos>
 																								<YPos>200</YPos>
 																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>100</YPos>
+																								<Flags>0</Flags>
 																							</Point>
 																							<Point>
 																								<XPos>2</XPos>
@@ -299,7 +315,7 @@
 											</Custom>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
+											<ObjectRef Name="Animations" ID="{BC1C2BAD-4470-4A16-90A4-03C10A9A6285}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -396,9 +412,14 @@
 																						</PropertyList>
 																						<PointList>
 																							<Point>
-																								<XPos>0</XPos>
+																								<XPos>0.5</XPos>
 																								<YPos>200</YPos>
 																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>100</YPos>
+																								<Flags>0</Flags>
 																							</Point>
 																							<Point>
 																								<XPos>2</XPos>
@@ -419,7 +440,7 @@
 											</Custom>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
+											<ObjectRef Name="Animations" ID="{BC1C2BAD-4470-4A16-90A4-03C10A9A6285}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -509,9 +530,14 @@
 																						</PropertyList>
 																						<PointList>
 																							<Point>
-																								<XPos>0</XPos>
+																								<XPos>0.5</XPos>
 																								<YPos>200</YPos>
 																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>100</YPos>
+																								<Flags>0</Flags>
 																							</Point>
 																							<Point>
 																								<XPos>2</XPos>
@@ -532,7 +558,7 @@
 											</Custom>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
+											<ObjectRef Name="Animations" ID="{BC1C2BAD-4470-4A16-90A4-03C10A9A6285}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -618,9 +644,14 @@
 																						</PropertyList>
 																						<PointList>
 																							<Point>
-																								<XPos>0</XPos>
+																								<XPos>0.5</XPos>
 																								<YPos>200</YPos>
 																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>100</YPos>
+																								<Flags>0</Flags>
 																							</Point>
 																							<Point>
 																								<XPos>2</XPos>
@@ -641,7 +672,7 @@
 											</Custom>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
+											<ObjectRef Name="Animations" ID="{BC1C2BAD-4470-4A16-90A4-03C10A9A6285}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -701,6 +732,58 @@
 								</Sound>
 							</ChildrenList>
 						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Ambience" ID="{0D00E5A1-0579-446E-B807-A773EC1B52E9}" ShortID="851632229">
+					<ChildrenList>
+						<Sound Name="background_drone" ID="{90EFD478-3DD2-4E90-9DAF-AF66036F34F0}" ShortID="329253379">
+							<PropertyList>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>13</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-26</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FA863D3-D26C-435D-8F82-3F762DBBE275}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Ambience" ID="{F21F5486-940E-469B-B2B8-46CEFB8CD4E6}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DroneFactorySpooky_S011SSFX_74" ID="{F39FCBA6-45BE-42D4-881D-14B4ECE96E1A}">
+									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="4642.4"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.83618214936248"/>
+										<Property Name="LoopBegin" Type="Real64" Value="7.65075895567699"/>
+										<Property Name="LoopEnd" Type="Real64" Value="67.7857243472981"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.68316697024894"/>
+										<Property Name="TrimEnd" Type="Real64" Value="82.6281967213115"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>DroneFactorySpooky_S011SSFX.74.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="826189689"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{E62A9A15-E064-4729-A7BB-68D9D2949777}"/>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="DroneFactorySpooky_S011SSFX_74" ID="{F39FCBA6-45BE-42D4-881D-14B4ECE96E1A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

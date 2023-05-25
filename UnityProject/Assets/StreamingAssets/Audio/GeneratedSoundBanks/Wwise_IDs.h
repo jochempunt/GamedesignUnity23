@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID PAUSE_VOICE_MALE = 701998974U;
         static const AkUniqueID PAUSE_VOICECLIPFEMALE = 968487436U;
+        static const AkUniqueID PLAY_BACKGROUND_DRONE = 3341998997U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_VOICE_MALE = 1338641808U;
         static const AkUniqueID PLAY_VOICECLIPFEMALE = 858333638U;
@@ -38,6 +39,11 @@ namespace AK
 
     } // namespace STATES
 
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID SOUNDSPEED = 3064004675U;
+    } // namespace GAME_PARAMETERS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
@@ -46,6 +52,8 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AMBIENCE = 85412153U;
+        static const AkUniqueID ANIMATIONS = 2087567908U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
     } // namespace BUSSES
 

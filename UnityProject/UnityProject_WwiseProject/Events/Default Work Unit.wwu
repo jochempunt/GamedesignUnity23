@@ -166,6 +166,17 @@
 						</Folder>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_background_drone" ID="{28CDF33D-E125-4A7A-8056-B6FF29797F90}">
+					<ChildrenList>
+						<Action Name="" ID="{A09380B4-3799-4F39-8625-C9F2C01BCC8D}" ShortID="372723751">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="background_drone" ID="{90EFD478-3DD2-4E90-9DAF-AF66036F34F0}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

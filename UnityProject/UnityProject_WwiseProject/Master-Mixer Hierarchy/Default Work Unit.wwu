@@ -9,6 +9,26 @@
 							<ObjectRef Name="System" ID="{113CA417-A6DA-4E33-8B4A-D1F4F349F524}" WorkUnitID="{28355FEC-9DE0-4F8A-9CD6-64E3D87A60EE}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="Ambience" ID="{F21F5486-940E-469B-B2B8-46CEFB8CD4E6}"/>
+						<Bus Name="Animations" ID="{BC1C2BAD-4470-4A16-90A4-03C10A9A6285}">
+							<PropertyList>
+								<Property Name="MaxDuckVolume" Type="Real64" Value="-40"/>
+								<Property Name="RecoveryTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<DuckingList>
+								<DuckItem>
+									<BusRef Name="Ambience" ID="{F21F5486-940E-469B-B2B8-46CEFB8CD4E6}"/>
+									<DuckingParam>
+										<Volume>-6</Volume>
+										<FadeInTime>0.100000001490116</FadeInTime>
+										<FadeOutTime>0.100000001490116</FadeOutTime>
+										<FadeCurve>FadeLog1</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+							</DuckingList>
+						</Bus>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

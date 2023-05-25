@@ -39,6 +39,10 @@ public class GlobalTimeController : MonoBehaviour
 
     private float maxTimeframe = 5;
 
+    [SerializeField]
+    private AK.Wwise.RTPC soundSpeed;
+
+
 
 
     //private bool timeScratchIsPlaying = false;
@@ -47,7 +51,9 @@ public class GlobalTimeController : MonoBehaviour
 
 
     [SerializeField]
-    private float currentvelocity = 0;
+    private float currentvelocity = 1;
+
+    private float soundSpeedFloat = 0;
 
     private List<uint> actual_playingID = new List<uint>();
 
@@ -60,7 +66,9 @@ public class GlobalTimeController : MonoBehaviour
         objectsToAnimate = GameObject.FindGameObjectsWithTag("AnimObject");
         Debug.Log(objectsToAnimate.Length);
         globalAnimTime = 0.0f;
-        currentvelocity = 0.0f;
+        //currentvelocity = 0.0f;
+        soundSpeed.SetGlobalValue(velocity);
+        soundSpeedFloat = currentvelocity;
         AkSoundEngine.SetState("TimeDirection", "Forwards");
     }
 
@@ -94,6 +102,7 @@ public class GlobalTimeController : MonoBehaviour
     private void FixedUpdate()
     {
         UpdateAnimations();
+        
     }
 
 
@@ -108,6 +117,9 @@ public class GlobalTimeController : MonoBehaviour
 
     private void Update()
     {
+
+        soundSpeed.SetGlobalValue(velocity);
+
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
@@ -126,8 +138,6 @@ public class GlobalTimeController : MonoBehaviour
 
         }
 
-
-
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             if (animationSoundIsPlaying == PlayState.STOPPED || animationSoundIsPlaying == PlayState.PAUSED)
@@ -145,9 +155,6 @@ public class GlobalTimeController : MonoBehaviour
             }
 
         }
-
-
-
 
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -180,8 +187,6 @@ public class GlobalTimeController : MonoBehaviour
 
     void PlayPause()
     {
-
-
         switch (animationSoundIsPlaying)
         {
             case PlayState.PLAYING:
@@ -205,13 +210,6 @@ public class GlobalTimeController : MonoBehaviour
             case PlayState.PAUSED:
                 animationSoundIsPlaying = PlayState.PLAYING;
 
-                //actual_playingID.Clear();
-
-
-
-
-
-
                 if (previousDirection != currentDirection)
                 {
 
@@ -232,20 +230,9 @@ public class GlobalTimeController : MonoBehaviour
                 {
                     foreach (GameObject obj in objectsToAnimate)
                     {
-
                         obj.GetComponent<AnimationScript>().resumeEvent.Post(obj);
-
-                        //SeekAll(seekPercentageOnDirectionChange);
                     }
                 }
-
-
-
-
-
-
-
-
                 break;
             case PlayState.STOPPED:
                 if ((forwards && globalAnimTime <= 0) || (!forwards && globalAnimTime >= maxTimeframe))
@@ -287,12 +274,7 @@ public class GlobalTimeController : MonoBehaviour
         {
             globalAnimTime = maxTimeframe;
             animationSoundIsPlaying = PlayState.STOPPED;
-            //---> errores
         }
-
-
-
-
     }
 
 
@@ -304,8 +286,6 @@ public class GlobalTimeController : MonoBehaviour
         //speed.SetGlobalValue(Mathf.Abs(currentvelocity * 100));
         float tempglobalAnimTime = globalAnimTime + Time.deltaTime * currentvelocity;
         globalAnimTime = Mathf.Clamp(tempglobalAnimTime, 0f, maxTimeframe);
-
-
     }
 
 
