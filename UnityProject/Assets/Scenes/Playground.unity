@@ -5549,7 +5549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forwardText: {fileID: 129362394}
   globalAnimTime: 0
-  velocity: 1
+  velocity: 0.5
   acceleration: 0
   currentvelocity: 0
 --- !u!1001 &923905523

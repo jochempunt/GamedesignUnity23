@@ -250,6 +250,54 @@
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FA863D3-D26C-435D-8F82-3F762DBBE275}"/>
 										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Time Stretch (Custom)" ID="{430730A1-91F1-420D-9D2E-0C655998BC5B}" ShortID="877306645" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+													<PropertyList>
+														<Property Name="QualityEnable" Type="int16" Value="1"/>
+													</PropertyList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{3A303DCD-1F96-4D78-B8FA-2A13C4CDAD04}" ShortID="755021519">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="TimeStretch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="soundSpeed" ID="{3FEEC2F5-3BF9-4409-8172-10ACD727872F}" WorkUnitID="{4003B38F-EA5D-43F5-BA4E-B255146327E9}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{FC49116A-8EC4-4D12-986E-A12918B485A0}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>200</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>2</XPos>
+																								<YPos>50</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</Effect>
+											</Custom>
+										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
 										</Reference>
@@ -325,6 +373,51 @@
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FA863D3-D26C-435D-8F82-3F762DBBE275}"/>
 										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Time Stretch (Custom)" ID="{7127C8C2-0909-4297-BA59-74882999CF8B}" ShortID="39972348" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{F5225DA4-20A3-4E7A-9771-0A0E80C3A49F}" ShortID="109788457">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="TimeStretch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="soundSpeed" ID="{3FEEC2F5-3BF9-4409-8172-10ACD727872F}" WorkUnitID="{4003B38F-EA5D-43F5-BA4E-B255146327E9}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{9082067C-C8B5-40FE-A753-C0453D18AD8E}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>200</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>2</XPos>
+																								<YPos>50</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</Effect>
+											</Custom>
+										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
 										</Reference>
@@ -393,6 +486,51 @@
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FA863D3-D26C-435D-8F82-3F762DBBE275}"/>
 										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Time Stretch (Custom)" ID="{6F345EC6-BC68-4881-9B20-B9B40EC574DA}" ShortID="443472196" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{FB94B25D-E912-4DC7-AEB9-5FD09E3A4836}" ShortID="115468749">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="TimeStretch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="soundSpeed" ID="{3FEEC2F5-3BF9-4409-8172-10ACD727872F}" WorkUnitID="{4003B38F-EA5D-43F5-BA4E-B255146327E9}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{E405DE83-C252-4EE2-BC73-ADFAA30D4260}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>200</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>2</XPos>
+																								<YPos>50</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</Effect>
+											</Custom>
+										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
 										</Reference>
@@ -456,6 +594,51 @@
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FA863D3-D26C-435D-8F82-3F762DBBE275}"/>
+										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Time Stretch (Custom)" ID="{E45557DA-5F45-4255-A298-181A11A496BB}" ShortID="842723221" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{C7586226-8E68-4687-B15E-57EEE42AD2C9}" ShortID="1020764782">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="TimeStretch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="soundSpeed" ID="{3FEEC2F5-3BF9-4409-8172-10ACD727872F}" WorkUnitID="{4003B38F-EA5D-43F5-BA4E-B255146327E9}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{C38E7141-FBD2-4EFE-AEFE-686C047380D3}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>200</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>2</XPos>
+																								<YPos>50</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</Effect>
+											</Custom>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
