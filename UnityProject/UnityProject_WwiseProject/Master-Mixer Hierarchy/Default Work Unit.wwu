@@ -10,7 +10,15 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Bus Name="Ambience" ID="{F21F5486-940E-469B-B2B8-46CEFB8CD4E6}"/>
+						<Bus Name="Ambience" ID="{F21F5486-940E-469B-B2B8-46CEFB8CD4E6}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
 						<Bus Name="Animations" ID="{BC1C2BAD-4470-4A16-90A4-03C10A9A6285}">
 							<PropertyList>
 								<Property Name="MaxDuckVolume" Type="Real64" Value="-40"/>
@@ -27,6 +35,15 @@
 									</DuckingParam>
 								</DuckItem>
 							</DuckingList>
+						</Bus>
+						<Bus Name="Music" ID="{BE7E8290-ED8B-4953-8804-29CEE08A0706}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-32</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 						</Bus>
 					</ChildrenList>
 				</Bus>

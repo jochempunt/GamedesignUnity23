@@ -17,6 +17,7 @@ namespace AK
         static const AkUniqueID PAUSE_VOICECLIPFEMALE = 968487436U;
         static const AkUniqueID PLAY_BACKGROUND_DRONE = 3341998997U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
+        static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_VOICE_MALE = 1338641808U;
         static const AkUniqueID PLAY_VOICECLIPFEMALE = 858333638U;
         static const AkUniqueID RESUME_VOICE_MALE = 3779043801U;
@@ -55,6 +56,7 @@ namespace AK
         static const AkUniqueID AMBIENCE = 85412153U;
         static const AkUniqueID ANIMATIONS = 2087567908U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

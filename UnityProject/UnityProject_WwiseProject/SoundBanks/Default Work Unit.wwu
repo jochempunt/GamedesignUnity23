@@ -5,9 +5,15 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{F59DD7DC-FC35-4FD1-86DA-1F63F0CCAF96}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Last moments of pure recall - The Caretaker (Stage 2)" ID="{B6355C5C-A0C4-417B-ACA0-E8D75477F631}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Long term dusk glimpses - The Caretaker (Stage 3)" ID="{76415894-7017-46E3-B804-9A16B8F7A361}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Animations" ID="{021FD6E7-A885-471B-8599-D14101FAF16A}" WorkUnitID="{069DF349-A3F7-44FF-AFFE-5AAB223664FD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="footsteps" ID="{97928454-9BCB-489C-91BD-88A25E43B958}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music" ID="{BE7E8290-ED8B-4953-8804-29CEE08A0706}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music" ID="{EE4C8B0C-C4D0-49E4-97ED-D639852EAC90}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Quiet dusk coming early - The Caretaker (Stage 2)" ID="{301A3952-CAD9-4CB9-BF37-23B023D7F17F}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="background_drone" ID="{90EFD478-3DD2-4E90-9DAF-AF66036F34F0}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Childishly Fresh Eyes - The Caretaker (Stage 1)" ID="{A8392F07-56CF-4FC1-A522-940A5D3DC60D}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -784,6 +784,119 @@
 								<ActiveSource Name="DroneFactorySpooky_S011SSFX_74" ID="{F39FCBA6-45BE-42D4-881D-14B4ECE96E1A}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="Music" ID="{EE4C8B0C-C4D0-49E4-97ED-D639852EAC90}" ShortID="200936054">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="3"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FA863D3-D26C-435D-8F82-3F762DBBE275}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Music" ID="{BE7E8290-ED8B-4953-8804-29CEE08A0706}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Childishly Fresh Eyes - The Caretaker (Stage 1)" ID="{A8392F07-56CF-4FC1-A522-940A5D3DC60D}" ShortID="146039934">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FA863D3-D26C-435D-8F82-3F762DBBE275}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Childishly Fresh Eyes - The Caretaker (Stage 1)" ID="{8FF477A0-4A47-45A8-A3F3-059260A0E80C}">
+											<Language>SFX</Language>
+											<AudioFile>Childishly Fresh Eyes - The Caretaker (Stage 1).wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="723331677"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Childishly Fresh Eyes - The Caretaker (Stage 1)" ID="{8FF477A0-4A47-45A8-A3F3-059260A0E80C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Last moments of pure recall - The Caretaker (Stage 2)" ID="{B6355C5C-A0C4-417B-ACA0-E8D75477F631}" ShortID="1070064629">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FA863D3-D26C-435D-8F82-3F762DBBE275}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Last moments of pure recall - The Caretaker (Stage 2)" ID="{C903AB2F-8AFF-4172-A85C-56E753AE1531}">
+											<Language>SFX</Language>
+											<AudioFile>Last moments of pure recall - The Caretaker (Stage 2).wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="518727250"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Last moments of pure recall - The Caretaker (Stage 2)" ID="{C903AB2F-8AFF-4172-A85C-56E753AE1531}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Long term dusk glimpses - The Caretaker (Stage 3)" ID="{76415894-7017-46E3-B804-9A16B8F7A361}" ShortID="616530770">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FA863D3-D26C-435D-8F82-3F762DBBE275}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Long term dusk glimpses - The Caretaker (Stage 3)" ID="{BF739364-04F2-4C9B-8FB7-5845E8F488A9}">
+											<Language>SFX</Language>
+											<AudioFile>Long term dusk glimpses - The Caretaker (Stage 3).wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="359638242"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Long term dusk glimpses - The Caretaker (Stage 3)" ID="{BF739364-04F2-4C9B-8FB7-5845E8F488A9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Quiet dusk coming early - The Caretaker (Stage 2)" ID="{301A3952-CAD9-4CB9-BF37-23B023D7F17F}" ShortID="169616119">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FA863D3-D26C-435D-8F82-3F762DBBE275}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Quiet dusk coming early - The Caretaker (Stage 2)" ID="{18C52922-02E8-48A1-BF67-D1F570830541}">
+											<Language>SFX</Language>
+											<AudioFile>Quiet dusk coming early - The Caretaker (Stage 2).wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="967315530"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Quiet dusk coming early - The Caretaker (Stage 2)" ID="{18C52922-02E8-48A1-BF67-D1F570830541}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="Childishly Fresh Eyes - The Caretaker (Stage 1)" ID="{A8392F07-56CF-4FC1-A522-940A5D3DC60D}"/>
+								<ItemRef Name="Last moments of pure recall - The Caretaker (Stage 2)" ID="{B6355C5C-A0C4-417B-ACA0-E8D75477F631}"/>
+								<ItemRef Name="Long term dusk glimpses - The Caretaker (Stage 3)" ID="{76415894-7017-46E3-B804-9A16B8F7A361}"/>
+								<ItemRef Name="Quiet dusk coming early - The Caretaker (Stage 2)" ID="{301A3952-CAD9-4CB9-BF37-23B023D7F17F}"/>
+							</Playlist>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
