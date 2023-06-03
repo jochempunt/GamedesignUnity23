@@ -5584,7 +5584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forwardText: {fileID: 129362394}
   globalAnimTime: 0
-  velocity: 0.5
+  velocity: 1
   acceleration: 0
   soundSpeed:
     idInternal: 0
