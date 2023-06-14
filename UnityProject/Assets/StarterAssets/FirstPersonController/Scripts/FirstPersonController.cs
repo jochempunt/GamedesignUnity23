@@ -9,6 +9,10 @@ namespace StarterAssets
 #if ENABLE_INPUT_SYSTEM
     [RequireComponent(typeof(PlayerInput))]
 #endif
+
+
+    
+
     public class FirstPersonController : MonoBehaviour
     {
         [Header("Player")]
@@ -82,6 +86,11 @@ namespace StarterAssets
         private GameObject _mainCamera;
 
         private const float _threshold = 0.01f;
+        private bool cursorControlEnabled = false;
+
+        public GlobalTimeController timeController;
+        public Texture2D cursorImage;
+        public Texture2D mouseClick;
 
         private bool IsCurrentDeviceMouse
         {
@@ -103,6 +112,8 @@ namespace StarterAssets
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
             lastFootstepTime = Time.time;
+            Cursor.SetCursor(cursorImage, new Vector2(30, 0), CursorMode.ForceSoftware);
+            Cursor.visible = false;
         }
 
         private void Start()
@@ -118,6 +129,9 @@ namespace StarterAssets
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+
+
+           
         }
 
         private void Update()
@@ -125,11 +139,50 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            
+            
+            
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                setCursorControlls();
+            }
+
+            if (Input.GetMouseButton(0))
+            {
+                Cursor.SetCursor(mouseClick, new Vector2(30,0), CursorMode.ForceSoftware);
+            }
+            else
+            {
+                Cursor.SetCursor(cursorImage, new Vector2(30, 0), CursorMode.ForceSoftware);
+            }
+        }
+
+
+
+        // UI stuffs
+        private void setCursorControlls()
+        {
+            cursorControlEnabled = !cursorControlEnabled;
+
+            if (cursorControlEnabled && timeController.animationSoundIsPlaying != PlayState.PLAYING)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
         }
 
         private void LateUpdate()
         {
-            CameraRotation();
+            if (!cursorControlEnabled)
+            {
+                CameraRotation();
+            }
+            
         }
 
         private void GroundedCheck()
