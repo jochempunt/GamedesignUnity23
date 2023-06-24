@@ -77,6 +77,22 @@ namespace StarterAssets
         private float lastFootstepTime = 0f;
         public bool isJumping = false;
 
+        // stuff for laserbeam
+        private bool laserActive = false;
+        [SerializeField] private Camera mainCamera;
+        public LineRenderer lineRenderer;
+        public Color hitColor;
+        public Color noHitColor;
+
+
+        //stuff for bubble spawning
+        public GameObject bubblePrefab;
+        private bool canSpawn = false;
+        private GameObject currentBubble;
+
+        [SerializeField]
+        private GlobalTimeController timeController;
+
 
 #if ENABLE_INPUT_SYSTEM
         private PlayerInput _playerInput;
@@ -88,7 +104,7 @@ namespace StarterAssets
         private const float _threshold = 0.01f;
         private bool cursorControlEnabled = false;
 
-        public GlobalTimeController timeController;
+        
         public Texture2D cursorImage;
         public Texture2D mouseClick;
 
@@ -130,8 +146,10 @@ namespace StarterAssets
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
 
+            Cursor.lockState = CursorLockMode.Confined;
 
-           
+
+
         }
 
         private void Update()
@@ -139,9 +157,24 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
-            
-            
-            
+
+            if (laserActive)
+            {
+                RaycastLaser();
+                if (Input.GetKeyDown(KeyCode.Mouse0) && canSpawn)
+                {
+                    spawnBubble();
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha1) && !cursorControlEnabled)
+            {
+                LineRenderer lineRenderer = gameObject.GetComponent<LineRenderer>();
+                lineRenderer.enabled = !lineRenderer.enabled;
+                laserActive = lineRenderer.enabled;
+            }
+
+
             if (Input.GetKeyDown(KeyCode.C))
             {
                 setCursorControlls();
@@ -156,6 +189,79 @@ namespace StarterAssets
                 Cursor.SetCursor(cursorImage, new Vector2(30, 0), CursorMode.ForceSoftware);
             }
         }
+
+        void deactivateLaser()
+        {
+            LineRenderer lineRenderer = gameObject.GetComponent<LineRenderer>();
+            lineRenderer.enabled = false;
+            laserActive = false;
+        }
+
+        private void spawnBubble()
+        {
+
+            if (currentBubble != null)
+            {
+                Destroy(currentBubble);
+                currentBubble = null;
+            }
+
+
+            // Get the mouse position in screen coordinates
+            Vector3 mousePosition = Input.mousePosition;
+            //Vector2 mousePosition = Mouse.current.position.ReadValue();
+            Debug.Log(mousePosition);
+
+            // Convert mouse position to ray
+            Ray direction = mainCamera.ScreenPointToRay(new Vector3(mousePosition.x, mousePosition.y));
+
+
+            RaycastHit hit;
+            Vector3 origin = new Vector3(transform.position.x - 0.3f, transform.position.y + 1f, transform.position.z + 0.7f);
+
+
+            if (Physics.Raycast(origin, Vector3.Normalize(direction.direction), out hit, 10f))
+            {
+                bubblePrefab.transform.position = hit.point;
+                Debug.Log("own position:" + transform.position + " bubble pos:" + hit.point);
+
+                currentBubble = Instantiate(bubblePrefab);
+                //timeController.resetTime();
+            }
+
+        }
+        private void RaycastLaser()
+        {
+            // Get the mouse position in screen coordinates
+            Vector3 mousePosition = Input.mousePosition;
+            //Vector2 mousePosition = Mouse.current.position.ReadValue();
+
+            // Convert mouse position to ray
+            Ray direction = mainCamera.ScreenPointToRay(new Vector3(mousePosition.x, mousePosition.y));
+
+            Vector3 origin = new Vector3(transform.position.x - 0.3f, transform.position.y + 1f, transform.position.z + 0.7f);
+
+            //Debug.DrawLine(origin, Vector3.Normalize(direction.direction) * 10f, Color.red);
+
+
+            if (Physics.Raycast(origin, Vector3.Normalize(direction.direction), 10f))
+            {
+
+                lineRenderer.material.SetColor("_BaseColor", Color.green);
+                canSpawn = true;
+            }
+            else
+            {
+
+                lineRenderer.material.SetColor("_BaseColor", Color.red);
+                canSpawn = false;
+            }
+
+            lineRenderer.SetPosition(0, origin);
+            lineRenderer.SetPosition(1, origin + Vector3.Normalize(direction.direction) * 10);
+
+        }
+
 
 
 
@@ -174,6 +280,8 @@ namespace StarterAssets
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
             }
+
+            deactivateLaser();
         }
 
         private void LateUpdate()

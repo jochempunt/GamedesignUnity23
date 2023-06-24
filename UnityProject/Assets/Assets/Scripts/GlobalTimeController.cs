@@ -207,6 +207,10 @@ public class GlobalTimeController : MonoBehaviour
 
     }
 
+    public void resetTime()
+    {
+        globalAnimTime = 0;
+    }
     public static float CalculateOpposite(float number)
     {
         if (number >= 0 && number <= 5)
