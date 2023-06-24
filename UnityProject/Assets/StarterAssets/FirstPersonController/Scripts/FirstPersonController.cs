@@ -11,7 +11,7 @@ namespace StarterAssets
 #endif
 
 
-    
+
 
     public class FirstPersonController : MonoBehaviour
     {
@@ -93,6 +93,14 @@ namespace StarterAssets
         [SerializeField]
         private GlobalTimeController timeController;
 
+        //stuff for sound
+        public AK.Wwise.RTPC inBubble;
+
+
+        public AK.Wwise.Event musicPause;
+        public AK.Wwise.Event musicPlay;
+
+
 
 #if ENABLE_INPUT_SYSTEM
         private PlayerInput _playerInput;
@@ -104,7 +112,7 @@ namespace StarterAssets
         private const float _threshold = 0.01f;
         private bool cursorControlEnabled = false;
 
-        
+
         public Texture2D cursorImage;
         public Texture2D mouseClick;
 
@@ -149,6 +157,8 @@ namespace StarterAssets
             Cursor.lockState = CursorLockMode.Confined;
 
 
+            enableUI(false);
+
 
         }
 
@@ -182,12 +192,24 @@ namespace StarterAssets
 
             if (Input.GetMouseButton(0))
             {
-                Cursor.SetCursor(mouseClick, new Vector2(30,0), CursorMode.ForceSoftware);
+                Cursor.SetCursor(mouseClick, new Vector2(30, 0), CursorMode.ForceSoftware);
             }
             else
             {
                 Cursor.SetCursor(cursorImage, new Vector2(30, 0), CursorMode.ForceSoftware);
             }
+
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                destroyBubble();
+            }
+
+            if (currentBubble != null)
+            {
+                getInBubble();
+            }
+
         }
 
         void deactivateLaser()
@@ -196,6 +218,33 @@ namespace StarterAssets
             lineRenderer.enabled = false;
             laserActive = false;
         }
+
+
+
+        private void destroyBubble()
+        {
+            if (currentBubble != null)
+            {
+                Destroy(currentBubble);
+                currentBubble = null;
+                musicPlay.Post(_mainCamera);
+                timeController.canTimeManipulate = false;
+                enableUI(false);
+            }
+        }
+
+        private void enableUI(bool en)
+        {
+
+
+            timeController.sliderOBJ.SetActive(en);
+            timeController.forwardText.enabled = en;
+            timeController.sliderTime.enabled = en;
+
+
+
+        }
+
 
         private void spawnBubble()
         {
@@ -226,7 +275,14 @@ namespace StarterAssets
                 Debug.Log("own position:" + transform.position + " bubble pos:" + hit.point);
 
                 currentBubble = Instantiate(bubblePrefab);
+                musicPause.Post(_mainCamera);
+                timeController.canTimeManipulate = true;
+                enableUI(true);
                 //timeController.resetTime();
+            }
+            else
+            {
+                musicPlay.Post(_mainCamera);
             }
 
         }
@@ -264,6 +320,31 @@ namespace StarterAssets
 
 
 
+        void getInBubble()
+        {
+            Vector3 playerPos = transform.position;
+            Vector3 bubbleCenter = currentBubble.transform.position;
+            float radius = currentBubble.transform.localScale.x / 2;
+
+            float distance = Vector3.Distance(playerPos, bubbleCenter);
+            float maxDistance = radius * 0.85f; // 85% of the radius
+
+            float mix = 1f;
+
+            if (distance > maxDistance)
+            {
+                float distanceBeyondThreshold = distance - maxDistance;
+                float fadePercentage = distanceBeyondThreshold / (radius - maxDistance);
+                mix = Mathf.Lerp(1f, 0f, fadePercentage);
+            }
+
+            inBubble.SetGlobalValue(mix);
+
+        }
+
+
+
+
 
         // UI stuffs
         private void setCursorControlls()
@@ -290,7 +371,7 @@ namespace StarterAssets
             {
                 CameraRotation();
             }
-            
+
         }
 
         private void GroundedCheck()

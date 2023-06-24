@@ -177,17 +177,61 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Music" ID="{F6D5A705-0990-4AFE-819F-27FFE717F103}">
+				<Folder Name="music" ID="{E2815037-A43C-411B-9197-24AD27376A35}" ShortID="325829587">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="7"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
-						<Action Name="" ID="{9EC33DA1-FAA7-4251-9181-5A4085D02579}" ShortID="198612184">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Music" ID="{EE4C8B0C-C4D0-49E4-97ED-D639852EAC90}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="Play_Music" ID="{F6D5A705-0990-4AFE-819F-27FFE717F103}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="7"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{9EC33DA1-FAA7-4251-9181-5A4085D02579}" ShortID="198612184">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music" ID="{EE4C8B0C-C4D0-49E4-97ED-D639852EAC90}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Pause_Music" ID="{CF3FA39A-EEB2-4B95-A235-83D2A1F41351}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="7"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{4A94A28D-8DA6-4B9E-B140-16A94BC20BDD}" ShortID="68515575">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music" ID="{EE4C8B0C-C4D0-49E4-97ED-D639852EAC90}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Resume_Music" ID="{017AE335-C01E-4FB4-8CA9-952788C951AE}">
+							<ChildrenList>
+								<Action Name="" ID="{4DA2A0E1-8222-4D2C-B5E7-E91ED3AC13BA}" ShortID="1037774699">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music" ID="{EE4C8B0C-C4D0-49E4-97ED-D639852EAC90}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

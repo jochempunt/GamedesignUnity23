@@ -251,6 +251,7 @@
 							<ChildrenList>
 								<Sound Name="Voice,Male,Screams,Falling,x3" ID="{602D0B1D-B0F7-428D-8234-591C7F586042}" ShortID="352952455">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-17</Value>
@@ -258,6 +259,9 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="characterAtennuation" ID="{7F9DC31B-B0D8-4DE8-8BA7-67837D78220A}" WorkUnitID="{B70DF4BC-4877-4F46-BCA1-595467785E3C}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FA863D3-D26C-435D-8F82-3F762DBBE275}"/>
 										</Reference>
@@ -373,12 +377,87 @@
 											</CustomState>
 										</CustomStateList>
 									</StateInfo>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{9E5258AA-7AD3-4ED0-AD02-94DE848BBA78}" ShortID="973797522">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="SpeakerPanning3DSpatializationMix"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="inBubble" ID="{03844D60-776C-4EDC-8054-8D5CE42BEBA3}" WorkUnitID="{4003B38F-EA5D-43F5-BA4E-B255146327E9}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{FEF7C0FA-12F6-431F-B7AE-999B8D15ED8B}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>100</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{DF1FD84E-B3A7-45C0-BF68-61E573B48790}" ShortID="1036806016">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="inBubble" ID="{03844D60-776C-4EDC-8054-8D5CE42BEBA3}" WorkUnitID="{4003B38F-EA5D-43F5-BA4E-B255146327E9}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{85A47802-E6B7-492A-8BED-642615A926E4}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>40</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 									<ActiveSourceList>
 										<ActiveSource Name="Voice,Male,Screamsx3_5s_01" ID="{1901CA23-3426-4F7C-9FA0-8E0BD54196FC}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Voice,Male,Screams,Falling_reverse" ID="{A7E3E380-241F-4EAC-990C-9459DF320B4F}" ShortID="478392483">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-17</Value>
@@ -386,6 +465,9 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="characterAtennuation" ID="{7F9DC31B-B0D8-4DE8-8BA7-67837D78220A}" WorkUnitID="{B70DF4BC-4877-4F46-BCA1-595467785E3C}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FA863D3-D26C-435D-8F82-3F762DBBE275}"/>
 										</Reference>
@@ -487,6 +569,80 @@
 											</CustomState>
 										</CustomStateList>
 									</StateInfo>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{132451F2-FF4C-4E26-9205-13C092989430}" ShortID="462134814">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="SpeakerPanning3DSpatializationMix"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="inBubble" ID="{03844D60-776C-4EDC-8054-8D5CE42BEBA3}" WorkUnitID="{4003B38F-EA5D-43F5-BA4E-B255146327E9}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{7120C308-D2F0-4C0C-B393-1A07B9DFC33D}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>100</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{C2441FBA-ED17-4FBE-9DAE-E92C8D60C540}" ShortID="24855669">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="inBubble" ID="{03844D60-776C-4EDC-8054-8D5CE42BEBA3}" WorkUnitID="{4003B38F-EA5D-43F5-BA4E-B255146327E9}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{98B1193B-4C59-4730-8D5E-EE3A39DC65EE}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>40</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 									<ActiveSourceList>
 										<ActiveSource Name="Voice,Male,Screams,Falling_reverse_5s_01" ID="{569973C7-CC2A-4F06-ACE3-F51AE1F6A336}" Platform="Linked"/>
 									</ActiveSourceList>
@@ -497,6 +653,7 @@
 							<ChildrenList>
 								<Sound Name="VoiceClipFemale_Reverse" ID="{96556D5A-C3FD-4B74-B482-4E0B3A11E9B9}" ShortID="821459561">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-17</Value>
@@ -504,6 +661,9 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="characterAtennuation" ID="{7F9DC31B-B0D8-4DE8-8BA7-67837D78220A}" WorkUnitID="{B70DF4BC-4877-4F46-BCA1-595467785E3C}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FA863D3-D26C-435D-8F82-3F762DBBE275}"/>
 										</Reference>
@@ -611,6 +771,7 @@
 								</Sound>
 								<Sound Name="VoiceClipFemale_S08CT_270(1)" ID="{C2EB3E0D-8C76-4FE2-A76E-679A588A9104}" ShortID="511288463">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-17</Value>
@@ -618,6 +779,9 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="characterAtennuation" ID="{7F9DC31B-B0D8-4DE8-8BA7-67837D78220A}" WorkUnitID="{B70DF4BC-4877-4F46-BCA1-595467785E3C}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FA863D3-D26C-435D-8F82-3F762DBBE275}"/>
 										</Reference>
@@ -706,6 +870,15 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<StateInfo>
+										<StatePropertyList>
+											<Property Name="EnableAttenuation"/>
+											<Property Name="Highpass"/>
+											<Property Name="Lowpass"/>
+											<Property Name="MakeUpGain"/>
+											<Property Name="MidiTransposition"/>
+											<Property Name="Pitch"/>
+											<Property Name="Volume"/>
+										</StatePropertyList>
 										<StateGroupList>
 											<StateGroupInfo>
 												<StateGroupRef Name="TimeDirection" ID="{2386AC03-9D55-4BDA-A24E-3CBA160F94CF}"/>
@@ -714,18 +887,62 @@
 										<CustomStateList>
 											<CustomState>
 												<StateRef Name="Forwards" ID="{EED17E86-F367-4370-92C8-8A0C6FB4BDB0}"/>
-												<CustomState Name="" ID="{FF4FABB6-08BF-4ABD-8058-58A85A170949}" ShortID="416806798"/>
+												<CustomState Name="" ID="{FF4FABB6-08BF-4ABD-8058-58A85A170949}" ShortID="416806798">
+													<PropertyList>
+														<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+													</PropertyList>
+												</CustomState>
 											</CustomState>
 											<CustomState>
 												<StateRef Name="Backwards" ID="{72FBAE06-3930-45FE-B1EA-AFBE28C0182F}"/>
 												<CustomState Name="" ID="{31D8D9B0-9654-4A38-854E-68685F764A6B}" ShortID="309004442">
 													<PropertyList>
+														<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 														<Property Name="Volume" Type="Real64" Value="-108"/>
 													</PropertyList>
 												</CustomState>
 											</CustomState>
 										</CustomStateList>
 									</StateInfo>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{1EC147DC-16DC-4332-A9C3-4CBA7E5B7B86}" ShortID="18650627">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="SpeakerPanning3DSpatializationMix"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="inBubble" ID="{03844D60-776C-4EDC-8054-8D5CE42BEBA3}" WorkUnitID="{4003B38F-EA5D-43F5-BA4E-B255146327E9}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{E09D666B-C55C-4981-95C9-1A718880679A}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>100</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>100</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 									<ActiveSourceList>
 										<ActiveSource Name="VoiceClipFemale_5s_01" ID="{5753A9EA-A5F4-438C-B654-A4732C2CC628}" Platform="Linked"/>
 									</ActiveSourceList>

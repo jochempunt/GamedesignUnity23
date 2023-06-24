@@ -26,6 +26,7 @@ public class GlobalTimeController : MonoBehaviour
     public TextMeshProUGUI forwardText;
     public TextMeshProUGUI sliderTime;
     public Slider slider;
+    public GameObject sliderOBJ;
 
 
 
@@ -48,8 +49,6 @@ public class GlobalTimeController : MonoBehaviour
     private AK.Wwise.RTPC soundSpeed;
 
 
-
-
     //private bool timeScratchIsPlaying = false;
     public PlayState animationSoundIsPlaying = PlayState.STOPPED;
     private bool forwards = true;
@@ -66,6 +65,8 @@ public class GlobalTimeController : MonoBehaviour
 
     private DIRECTION currentDirection = DIRECTION.FORWARDS;
 
+
+    public bool canTimeManipulate = false;
 
 
 
@@ -140,7 +141,10 @@ public class GlobalTimeController : MonoBehaviour
     {
 
 
-
+        if (!canTimeManipulate)
+        {
+            return;
+        }
 
 
         soundSpeed.SetGlobalValue(velocity);
@@ -226,15 +230,14 @@ public class GlobalTimeController : MonoBehaviour
     }
 
 
-
+    
     void PlayPause()
     {
+        
         switch (animationSoundIsPlaying)
         {
             case PlayState.PLAYING:
                 animationSoundIsPlaying = PlayState.PAUSED;
-
-
                 int i = 0;
                 foreach (GameObject obj in objectsToAnimate)
                 {
@@ -254,6 +257,9 @@ public class GlobalTimeController : MonoBehaviour
             case PlayState.PAUSED:
                 animationSoundIsPlaying = PlayState.PLAYING;
                 SeekAllAnims();
+
+                
+
 
                 if (previousDirection != currentDirection)
                 {

@@ -3,7 +3,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	858333638	Play_VoiceClipFemale			\Default Work Unit\Animations\Woman_Standing\Play_VoiceClipFemale	
 	968487436	Pause_VoiceClipFemale			\Default Work Unit\Animations\Woman_Standing\Pause_VoiceClipFemale	
 	1338641808	Play_Voice_Male			\Default Work Unit\Animations\Man_Falling\Play_Voice_Male	
-	2932040671	Play_Music			\Default Work Unit\Play_Music	
+	2735935537	Pause_Music			\Default Work Unit\music\Pause_Music	
+	2932040671	Play_Music			\Default Work Unit\music\Play_Music	
+	2940177080	Resume_Music			\Default Work Unit\music\Resume_Music	
 	3341998997	Play_background_drone			\Default Work Unit\Play_background_drone	
 	3435969486	Resume_VoiceClipFemale_02			\Default Work Unit\Animations\Woman_Standing\Resume_VoiceClipFemale_02	
 	3779043801	Resume_Voice_Male			\Default Work Unit\Animations\Man_Falling\Resume_Voice_Male	
@@ -24,6 +26,7 @@ Custom State	ID	Name	State Group	Owner		Notes
 	612295937	Backwards	TimeDirection	\Actor-Mixer Hierarchy\TransferUnit\Animations\Man-Falling\Voice,Male,Screams,Falling,x3		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	2394225038	inBubble			\Default Work Unit\inBubble	
 	3064004675	soundSpeed			\Default Work Unit\soundSpeed	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes

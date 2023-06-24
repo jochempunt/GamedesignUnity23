@@ -6534,6 +6534,7 @@ MonoBehaviour:
   forwardText: {fileID: 129362394}
   sliderTime: {fileID: 1006747426}
   slider: {fileID: 2144269900}
+  sliderOBJ: {fileID: 2144269898}
   globalAnimTime: 0
   velocity: 1
   acceleration: 0
@@ -6544,6 +6545,7 @@ MonoBehaviour:
       type: 2}
   animationSoundIsPlaying: 2
   currentvelocity: 0
+  canTimeManipulate: 0
 --- !u!1001 &923905523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14570,13 +14572,31 @@ PrefabInstance:
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: footStepSpeed
-      value: 300
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: timeController
       value: 
       objectReference: {fileID: 920092628}
+    - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: inBubble.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 6c57fe41ca009604382f5b635dc2dc70,
+        type: 2}
+    - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: musicPlay.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 7fd40688f6715dd4b8657143fa67307b,
+        type: 2}
+    - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: musicPause.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: a4e54df32d2d69b41b01bebe09fd15d7,
+        type: 2}
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: myFootsteps.WwiseObjectReference
