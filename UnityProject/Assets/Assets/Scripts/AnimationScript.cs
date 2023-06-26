@@ -12,7 +12,7 @@ public class AnimationScript : MonoBehaviour
     public AK.Wwise.Event playEvent;
     public AK.Wwise.Event pauseEvent;
     public AK.Wwise.Event resumeEvent;
-    
+    public AK.Wwise.Event seekEvent;
 
     private GameObject bubble;
 
@@ -80,10 +80,20 @@ public class AnimationScript : MonoBehaviour
 
             duplicatedObject.tag = "Untagged";
             Debug.Log(gameObject.name + " duration: " + clip.length);
+            setMatAlpha(0f);
         }
 
         Debug.Log(gameObject.name + " hipPos: " + hipBone.transform.position);
-        bubble = GameObject.FindGameObjectsWithTag("Bubble")[0];
+
+        if (GameObject.FindGameObjectsWithTag("Bubble").Length >= 1)
+        {
+            bubble = GameObject.FindGameObjectsWithTag("Bubble")[0];
+        }
+        else
+        {
+            bubble = null;
+        }
+
     }
 
 
@@ -156,14 +166,36 @@ public class AnimationScript : MonoBehaviour
 
     public void Update()
     {
-        if (staticStance)
+
+        if (bubble != null)
         {
-            setVisibilityStatic();
+            if (staticStance)
+            {
+                setVisibilityStatic();
+            }
+            else
+            {
+                setVisibility();
+            }
         }
         else
         {
-            setVisibility();
+
+            if (staticStance)
+            {
+                setMatAlpha(1f);
+            }
+
+            if (GameObject.FindGameObjectsWithTag("Bubble").Length >= 1)
+            {
+                bubble = GameObject.FindGameObjectsWithTag("Bubble")[0];
+            }
+            else
+            {
+                bubble = null;
+            }
         }
+
 
     }
 

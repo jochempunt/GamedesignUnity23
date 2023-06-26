@@ -24,6 +24,9 @@
 								<Property Name="MaxDuckVolume" Type="Real64" Value="-40"/>
 								<Property Name="RecoveryTime" Type="Real64" Value="0.1"/>
 							</PropertyList>
+							<PositioningInfo>
+								<Panner Name="" ID="{4B9CE010-CCDA-483E-B2EE-32EEF78B8362}"/>
+							</PositioningInfo>
 							<DuckingList>
 								<DuckItem>
 									<BusRef Name="Ambience" ID="{F21F5486-940E-469B-B2B8-46CEFB8CD4E6}"/>
@@ -43,7 +46,11 @@
 										<Value>-32</Value>
 									</ValueList>
 								</Property>
+								<Property Name="SpeakerPanning" Type="int16" Value="2"/>
 							</PropertyList>
+							<PositioningInfo>
+								<Panner Name="" ID="{C6216841-7EAC-4C31-AC00-C9F71875BD5B}"/>
+							</PositioningInfo>
 						</Bus>
 					</ChildrenList>
 				</Bus>

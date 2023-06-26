@@ -11,7 +11,7 @@ namespace StarterAssets
 #endif
 
 
-    
+
 
     public class FirstPersonController : MonoBehaviour
     {
@@ -77,6 +77,30 @@ namespace StarterAssets
         private float lastFootstepTime = 0f;
         public bool isJumping = false;
 
+        // stuff for laserbeam
+        private bool laserActive = false;
+        [SerializeField] private Camera mainCamera;
+        public LineRenderer lineRenderer;
+        public Color hitColor;
+        public Color noHitColor;
+
+
+        //stuff for bubble spawning
+        public GameObject bubblePrefab;
+        private bool canSpawn = false;
+        private GameObject currentBubble;
+
+        [SerializeField]
+        private GlobalTimeController timeController;
+
+        //stuff for sound
+        public AK.Wwise.RTPC inBubble;
+
+
+        public AK.Wwise.Event musicPause;
+        public AK.Wwise.Event musicPlay;
+
+
 
 #if ENABLE_INPUT_SYSTEM
         private PlayerInput _playerInput;
@@ -88,7 +112,7 @@ namespace StarterAssets
         private const float _threshold = 0.01f;
         private bool cursorControlEnabled = false;
 
-        public GlobalTimeController timeController;
+
         public Texture2D cursorImage;
         public Texture2D mouseClick;
 
@@ -130,8 +154,12 @@ namespace StarterAssets
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
 
+            Cursor.lockState = CursorLockMode.Confined;
 
-           
+
+            enableUI(false);
+
+
         }
 
         private void Update()
@@ -139,9 +167,24 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
-            
-            
-            
+
+            if (laserActive)
+            {
+                RaycastLaser();
+                if (Input.GetKeyDown(KeyCode.Mouse0) && canSpawn)
+                {
+                    spawnBubble();
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha1) && !cursorControlEnabled)
+            {
+                LineRenderer lineRenderer = gameObject.GetComponent<LineRenderer>();
+                lineRenderer.enabled = !lineRenderer.enabled;
+                laserActive = lineRenderer.enabled;
+            }
+
+
             if (Input.GetKeyDown(KeyCode.C))
             {
                 setCursorControlls();
@@ -149,13 +192,157 @@ namespace StarterAssets
 
             if (Input.GetMouseButton(0))
             {
-                Cursor.SetCursor(mouseClick, new Vector2(30,0), CursorMode.ForceSoftware);
+                Cursor.SetCursor(mouseClick, new Vector2(30, 0), CursorMode.ForceSoftware);
             }
             else
             {
                 Cursor.SetCursor(cursorImage, new Vector2(30, 0), CursorMode.ForceSoftware);
             }
+
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                destroyBubble();
+            }
+
+            if (currentBubble != null)
+            {
+                getInBubble();
+            }
+
         }
+
+        void deactivateLaser()
+        {
+            LineRenderer lineRenderer = gameObject.GetComponent<LineRenderer>();
+            lineRenderer.enabled = false;
+            laserActive = false;
+        }
+
+
+
+        private void destroyBubble()
+        {
+            if (currentBubble != null)
+            {
+                Destroy(currentBubble);
+                currentBubble = null;
+                musicPlay.Post(_mainCamera);
+                timeController.canTimeManipulate = false;
+                enableUI(false);
+            }
+        }
+
+        private void enableUI(bool en)
+        {
+
+
+            timeController.sliderOBJ.SetActive(en);
+            timeController.forwardText.enabled = en;
+            timeController.sliderTime.enabled = en;
+
+
+
+        }
+
+
+        private void spawnBubble()
+        {
+
+            if (currentBubble != null)
+            {
+                Destroy(currentBubble);
+                currentBubble = null;
+            }
+
+
+            // Get the mouse position in screen coordinates
+            Vector3 mousePosition = Input.mousePosition;
+            //Vector2 mousePosition = Mouse.current.position.ReadValue();
+            Debug.Log(mousePosition);
+
+            // Convert mouse position to ray
+            Ray direction = mainCamera.ScreenPointToRay(new Vector3(mousePosition.x, mousePosition.y));
+
+
+            RaycastHit hit;
+            Vector3 origin = new Vector3(transform.position.x - 0.3f, transform.position.y + 1f, transform.position.z + 0.7f);
+
+
+            if (Physics.Raycast(origin, Vector3.Normalize(direction.direction), out hit, 10f))
+            {
+                bubblePrefab.transform.position = hit.point;
+                Debug.Log("own position:" + transform.position + " bubble pos:" + hit.point);
+
+                currentBubble = Instantiate(bubblePrefab);
+                musicPause.Post(_mainCamera);
+                timeController.canTimeManipulate = true;
+                enableUI(true);
+                //timeController.resetTime();
+            }
+            else
+            {
+                musicPlay.Post(_mainCamera);
+            }
+
+        }
+        private void RaycastLaser()
+        {
+            // Get the mouse position in screen coordinates
+            Vector3 mousePosition = Input.mousePosition;
+            //Vector2 mousePosition = Mouse.current.position.ReadValue();
+
+            // Convert mouse position to ray
+            Ray direction = mainCamera.ScreenPointToRay(new Vector3(mousePosition.x, mousePosition.y));
+
+            Vector3 origin = new Vector3(transform.position.x - 0.3f, transform.position.y + 1f, transform.position.z + 0.7f);
+
+            //Debug.DrawLine(origin, Vector3.Normalize(direction.direction) * 10f, Color.red);
+
+
+            if (Physics.Raycast(origin, Vector3.Normalize(direction.direction), 10f))
+            {
+
+                lineRenderer.material.SetColor("_BaseColor", Color.green);
+                canSpawn = true;
+            }
+            else
+            {
+
+                lineRenderer.material.SetColor("_BaseColor", Color.red);
+                canSpawn = false;
+            }
+
+            lineRenderer.SetPosition(0, origin);
+            lineRenderer.SetPosition(1, origin + Vector3.Normalize(direction.direction) * 10);
+
+        }
+
+
+
+        void getInBubble()
+        {
+            Vector3 playerPos = transform.position;
+            Vector3 bubbleCenter = currentBubble.transform.position;
+            float radius = currentBubble.transform.localScale.x / 2;
+
+            float distance = Vector3.Distance(playerPos, bubbleCenter);
+            float maxDistance = radius * 0.85f; // 85% of the radius
+
+            float mix = 1f;
+
+            if (distance > maxDistance)
+            {
+                float distanceBeyondThreshold = distance - maxDistance;
+                float fadePercentage = distanceBeyondThreshold / (radius - maxDistance);
+                mix = Mathf.Lerp(1f, 0f, fadePercentage);
+            }
+
+            inBubble.SetGlobalValue(mix);
+
+        }
+
+
 
 
 
@@ -174,6 +361,8 @@ namespace StarterAssets
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
             }
+
+            deactivateLaser();
         }
 
         private void LateUpdate()
@@ -182,7 +371,7 @@ namespace StarterAssets
             {
                 CameraRotation();
             }
-            
+
         }
 
         private void GroundedCheck()
