@@ -11,8 +11,7 @@ public class AnimationScript : MonoBehaviour
 
     public AK.Wwise.Event playEvent;
     public AK.Wwise.Event pauseEvent;
-    public AK.Wwise.Event resumeEvent;
-    public AK.Wwise.Event seekEvent;
+  
 
     private GameObject bubble;
 
@@ -29,6 +28,20 @@ public class AnimationScript : MonoBehaviour
 
     }
 
+
+    public GameObject getHipbone()
+    {
+        if(hipBone != null)
+        {
+            return hipBone;
+        }
+        else
+        {
+            Debug.Log("couldnt find hipbone of: " + gameObject.name);
+            return gameObject;
+        }
+        
+    }
 
 
 

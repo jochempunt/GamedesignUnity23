@@ -43,7 +43,7 @@ public class GlobalTimeController : MonoBehaviour
     [SerializeField]
     private float acceleration;
 
-    private float maxTimeframe = 5;
+    private float maxTimeframe = 20f;
 
     [SerializeField]
     private AK.Wwise.RTPC soundSpeed;
@@ -69,7 +69,13 @@ public class GlobalTimeController : MonoBehaviour
     public bool canTimeManipulate = false;
 
 
+    public float maxTime = 20f;
 
+    public bool playerIsInBubble;
+
+
+    private bool bubblePlaying = false;
+    private bool animSoundPlaying = false;
 
 
 
@@ -77,7 +83,7 @@ public class GlobalTimeController : MonoBehaviour
     void Start()
     {
         objectsToAnimate = GameObject.FindGameObjectsWithTag("AnimObject");
-        Debug.Log(objectsToAnimate.Length);
+      
         globalAnimTime = 0.0f;
         //currentvelocity = 0.0f;
         soundSpeed.SetGlobalValue(velocity);
@@ -98,24 +104,10 @@ public class GlobalTimeController : MonoBehaviour
 
 
 
-    // Update is called once per frame
 
 
-    private float GetSeekDirectionPercentage()
-    {
-        float currentPercentage = (globalAnimTime / 5.0f) * 100;
-        Debug.Log("current% =" + currentPercentage + " new % = : " + (Mathf.Abs(100 - currentPercentage)));
-        return Mathf.Abs(100 - currentPercentage);
 
-    }
 
-    private void Seek(float _percentage, uint eventID, GameObject obj)
-    {
-
-        //uint eventID = obj.GetComponent<TimeScript>().playEvent.Id;
-        AkSoundEngine.SeekOnEvent(eventID, obj, 4500);
-
-    }
 
     private void FixedUpdate()
     {
@@ -127,8 +119,23 @@ public class GlobalTimeController : MonoBehaviour
     private void SeekObjectInMs(GameObject g, int ms)
     {
         AK.Wwise.Event eventW = g.GetComponent<AnimationScript>().playEvent;
-        uint playID = eventW.Post(g);
-        AkSoundEngine.SeekOnEvent(eventW.Id, g, ms);
+
+
+        if (playerIsInBubble)
+        {
+            GameObject hipBone = g.GetComponent<AnimationScript>().getHipbone();
+            uint playID = eventW.Post(hipBone);
+            AkSoundEngine.SeekOnEvent(eventW.Id, hipBone, ms);
+            animSoundPlaying = true;
+        }
+        else
+        {
+            GameObject bubble = GameObject.FindGameObjectWithTag("Bubble");
+            uint playID = eventW.Post(bubble);
+            AkSoundEngine.SeekOnEvent(eventW.Id, bubble, ms);
+            bubblePlaying = true;
+        }
+
     }
 
 
@@ -147,8 +154,46 @@ public class GlobalTimeController : MonoBehaviour
         }
 
 
+        if( animationSoundIsPlaying == PlayState.PLAYING)
+        {
+            if (playerIsInBubble && bubblePlaying)
+            {
+
+                foreach (GameObject obj in objectsToAnimate)
+                {
+
+                    GameObject bubble = GameObject.FindGameObjectWithTag("Bubble");
+                    obj.GetComponent<AnimationScript>().pauseEvent.Post(bubble);
+
+
+                }
+                Debug.Log("this shit dont work");
+
+
+                bubblePlaying = false;
+                SeekAllAnims();
+            }
+
+            if (!playerIsInBubble && animSoundPlaying)
+            {
+                foreach (GameObject obj in objectsToAnimate)
+                {
+                    GameObject hipBone = obj.GetComponent<AnimationScript>().getHipbone();
+                    obj.GetComponent<AnimationScript>().pauseEvent.Post(hipBone);
+
+
+                }
+
+                animSoundPlaying = false;
+                SeekAllAnims();
+            }
+
+        }
+
+
+
         soundSpeed.SetGlobalValue(velocity);
-        sliderTime.text = (Mathf.Round(globalAnimTime * 100f) / 100f)  + "s";
+        sliderTime.text = (Mathf.Round(globalAnimTime * 100f) / 100f) + "s";
 
         if (animationSoundIsPlaying == PlayState.PLAYING)
         {
@@ -211,44 +256,52 @@ public class GlobalTimeController : MonoBehaviour
 
     }
 
+
+
     public void resetTime()
     {
         globalAnimTime = 0;
     }
-    public static float CalculateOpposite(float number)
+    public float CalculateOpposite(float number)
     {
-        if (number >= 0 && number <= 5)
+        if (number >= 0 && number <= maxTime)
         {
-            return 5.0f - number;
+            return maxTime - number;
         }
         else
         {
-            Debug.LogError("Input number must be between 0 and 5.");
+            Debug.LogError("Input number must be between 0 and maxtime");
             return 0.0f;
 
         }
     }
 
 
-    
+
     void PlayPause()
     {
-        
+
         switch (animationSoundIsPlaying)
         {
             case PlayState.PLAYING:
                 animationSoundIsPlaying = PlayState.PAUSED;
-                int i = 0;
+
                 foreach (GameObject obj in objectsToAnimate)
                 {
-                    obj.GetComponent<AnimationScript>().pauseEvent.Post(obj);
-
-                    if (actual_playingID.Count > 1)
+                    if (playerIsInBubble)
                     {
-                        AkSoundEngine.StopPlayingID(actual_playingID[i]);
-                        actual_playingID.Remove(actual_playingID[i]);
-                        i++;
+                        GameObject hipBone = obj.GetComponent<AnimationScript>().getHipbone();
+                        obj.GetComponent<AnimationScript>().pauseEvent.Post(hipBone);
+                        animSoundPlaying = false;
                     }
+                    else
+                    {
+                        GameObject bubble = GameObject.FindGameObjectWithTag("Bubble");
+                        obj.GetComponent<AnimationScript>().pauseEvent.Post(bubble);
+                        bubblePlaying = false;
+                    }
+
+
                 }
 
 
@@ -258,7 +311,7 @@ public class GlobalTimeController : MonoBehaviour
                 animationSoundIsPlaying = PlayState.PLAYING;
                 SeekAllAnims();
 
-                
+
 
 
                 if (previousDirection != currentDirection)
@@ -292,10 +345,15 @@ public class GlobalTimeController : MonoBehaviour
             {
                 shiftTime = (int)(CalculateOpposite(globalAnimTime) * 1000);
             }
-            foreach (GameObject objj in objectsToAnimate)
+
+            SeekObjectInMs(obj, shiftTime);
+
+
+            /*foreach (GameObject objj in objectsToAnimate)
             {
+                
                 SeekObjectInMs(obj, shiftTime);
-            }
+            }*/
             //obj.GetComponent<AnimationScript>().playEvent.Post(obj);
         }
     }
@@ -304,7 +362,6 @@ public class GlobalTimeController : MonoBehaviour
     {
 
 
-        Debug.Log(globalAnimTime);
 
         if (forwards && globalAnimTime <= maxTimeframe)
         {
@@ -321,6 +378,8 @@ public class GlobalTimeController : MonoBehaviour
         {
             globalAnimTime = 0;
             animationSoundIsPlaying = PlayState.STOPPED;
+            animSoundPlaying = false;
+            bubblePlaying = false;
 
         }
 
@@ -328,6 +387,8 @@ public class GlobalTimeController : MonoBehaviour
         {
             globalAnimTime = maxTimeframe;
             animationSoundIsPlaying = PlayState.STOPPED;
+            animSoundPlaying = false;
+            bubblePlaying = false;
         }
     }
 

@@ -949,6 +949,441 @@
 								</Sound>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="C1" ID="{A7450CB4-6494-438E-8514-CC3447FC061B}" ShortID="240697954">
+							<ChildrenList>
+								<Sound Name="animC1_forwards" ID="{56EBCA3F-E075-4021-BDA4-7BC190A80B14}" ShortID="811606223">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="characterAtennuation" ID="{7F9DC31B-B0D8-4DE8-8BA7-67837D78220A}" WorkUnitID="{B70DF4BC-4877-4F46-BCA1-595467785E3C}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FA863D3-D26C-435D-8F82-3F762DBBE275}"/>
+										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Time Stretch (Custom)" ID="{8DABEF47-4622-48D6-8A32-617A503FCE0D}" ShortID="770322671" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+													<PropertyList>
+														<Property Name="QualityEnable" Type="int16" Value="1"/>
+													</PropertyList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{7FD3BBC8-3F51-4C77-9FDE-02EE1057D996}" ShortID="469070383">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="TimeStretch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="soundSpeed" ID="{3FEEC2F5-3BF9-4409-8172-10ACD727872F}" WorkUnitID="{4003B38F-EA5D-43F5-BA4E-B255146327E9}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{ECAD1BB0-0E8B-4AF6-A4E7-79647DE6E6EB}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0.5</XPos>
+																								<YPos>200</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>100</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>2</XPos>
+																								<YPos>50</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</Effect>
+											</Custom>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Animations" ID="{BC1C2BAD-4470-4A16-90A4-03C10A9A6285}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="animC1_forwards" ID="{69C9D403-65C2-41A3-BF82-6EBECC14E53D}">
+											<Language>SFX</Language>
+											<AudioFile>animC1_forwards.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="173129455"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="TimeDirection" ID="{2386AC03-9D55-4BDA-A24E-3CBA160F94CF}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Forwards" ID="{EED17E86-F367-4370-92C8-8A0C6FB4BDB0}"/>
+												<CustomState Name="" ID="{B04EA171-68F3-4E03-8239-FB3428B03BD1}" ShortID="946765045"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Backwards" ID="{72FBAE06-3930-45FE-B1EA-AFBE28C0182F}"/>
+												<CustomState Name="" ID="{45013A63-2E02-44CD-887E-B8F144E4A4C3}" ShortID="882668206">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="animC1_forwards" ID="{69C9D403-65C2-41A3-BF82-6EBECC14E53D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="animC1_reverse" ID="{5C0D1677-7881-4B27-9CFE-32065C44348E}" ShortID="875538828">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="characterAtennuation" ID="{7F9DC31B-B0D8-4DE8-8BA7-67837D78220A}" WorkUnitID="{B70DF4BC-4877-4F46-BCA1-595467785E3C}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FA863D3-D26C-435D-8F82-3F762DBBE275}"/>
+										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Time Stretch (Custom)" ID="{9169E054-3FA5-432D-9C66-60D96AB086C8}" ShortID="1038568045" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+													<PropertyList>
+														<Property Name="QualityEnable" Type="int16" Value="1"/>
+													</PropertyList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{A24A607D-AE5F-448A-A6C0-D28E2BA90ADF}" ShortID="683566725">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="TimeStretch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="soundSpeed" ID="{3FEEC2F5-3BF9-4409-8172-10ACD727872F}" WorkUnitID="{4003B38F-EA5D-43F5-BA4E-B255146327E9}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{A21239AB-0922-4173-8DC3-412E0D24CF51}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0.5</XPos>
+																								<YPos>200</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>100</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>2</XPos>
+																								<YPos>50</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</Effect>
+											</Custom>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Animations" ID="{BC1C2BAD-4470-4A16-90A4-03C10A9A6285}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="animC1_reverse" ID="{3E60CD0F-9374-41B0-8EBB-D1CB93DAEBE8}">
+											<Language>SFX</Language>
+											<AudioFile>animC1_reverse.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="509806757"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="TimeDirection" ID="{2386AC03-9D55-4BDA-A24E-3CBA160F94CF}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Forwards" ID="{EED17E86-F367-4370-92C8-8A0C6FB4BDB0}"/>
+												<CustomState Name="" ID="{BD0240F2-CFEC-4BF8-9052-6FDD744EA2DD}" ShortID="901240278">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Backwards" ID="{72FBAE06-3930-45FE-B1EA-AFBE28C0182F}"/>
+												<CustomState Name="" ID="{9277DBAC-0A5F-4035-B368-D4E12FCA4152}" ShortID="40311097"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="animC1_reverse" ID="{3E60CD0F-9374-41B0-8EBB-D1CB93DAEBE8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="C2" ID="{B5066AD2-1F5B-42C0-8A90-C258A34E8282}" ShortID="422767134">
+							<ChildrenList>
+								<Sound Name="animC2_forwards" ID="{AE4FCA75-4141-4A93-BC3A-A04E4B6F3E84}" ShortID="601051112">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="characterAtennuation" ID="{7F9DC31B-B0D8-4DE8-8BA7-67837D78220A}" WorkUnitID="{B70DF4BC-4877-4F46-BCA1-595467785E3C}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FA863D3-D26C-435D-8F82-3F762DBBE275}"/>
+										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Time Stretch (Custom)" ID="{D4F4B70C-0DBC-45D4-AE94-3E0504C7A02C}" ShortID="825980683" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+													<PropertyList>
+														<Property Name="QualityEnable" Type="int16" Value="1"/>
+													</PropertyList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{FFB1648F-6ADD-4CBD-B0CE-0E82A10D131D}" ShortID="763808936">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="TimeStretch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="soundSpeed" ID="{3FEEC2F5-3BF9-4409-8172-10ACD727872F}" WorkUnitID="{4003B38F-EA5D-43F5-BA4E-B255146327E9}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{BE245A08-87ED-4D67-9682-37EC4C39999C}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0.5</XPos>
+																								<YPos>200</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>100</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>2</XPos>
+																								<YPos>50</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</Effect>
+											</Custom>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Animations" ID="{BC1C2BAD-4470-4A16-90A4-03C10A9A6285}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="animC2_forwards" ID="{4701EC81-6B1D-49DF-88F5-C7A203AE5B88}">
+											<Language>SFX</Language>
+											<AudioFile>animC2_forwards.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="94988592"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="TimeDirection" ID="{2386AC03-9D55-4BDA-A24E-3CBA160F94CF}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Forwards" ID="{EED17E86-F367-4370-92C8-8A0C6FB4BDB0}"/>
+												<CustomState Name="" ID="{BE612D95-A15F-4DBF-B5F2-1EE17821C4D0}" ShortID="805927338"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Backwards" ID="{72FBAE06-3930-45FE-B1EA-AFBE28C0182F}"/>
+												<CustomState Name="" ID="{81FFCF0D-7A79-4F12-BFE8-9D65D71D29FD}" ShortID="606915634">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="animC2_forwards" ID="{4701EC81-6B1D-49DF-88F5-C7A203AE5B88}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="animC2_reverse" ID="{50FAD4AE-A60F-421C-833C-F4C8A62B71FD}" ShortID="965550130">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="characterAtennuation" ID="{7F9DC31B-B0D8-4DE8-8BA7-67837D78220A}" WorkUnitID="{B70DF4BC-4877-4F46-BCA1-595467785E3C}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2FA863D3-D26C-435D-8F82-3F762DBBE275}"/>
+										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Time Stretch (Custom)" ID="{ED8DED1C-29A7-4C0E-962E-6E33DBE0DCB7}" ShortID="323871095" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+													<PropertyList>
+														<Property Name="QualityEnable" Type="int16" Value="1"/>
+													</PropertyList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{E29B551F-2D0B-462E-AD7B-178EF14E66AA}" ShortID="628729036">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="TimeStretch"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="soundSpeed" ID="{3FEEC2F5-3BF9-4409-8172-10ACD727872F}" WorkUnitID="{4003B38F-EA5D-43F5-BA4E-B255146327E9}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{4613465C-CBC0-45D7-B79B-9A7AA8364888}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0.5</XPos>
+																								<YPos>200</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>100</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>2</XPos>
+																								<YPos>50</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</Effect>
+											</Custom>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Animations" ID="{BC1C2BAD-4470-4A16-90A4-03C10A9A6285}" WorkUnitID="{74FAC479-77F4-4716-B11E-034310D59AEF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="animC2_reverse" ID="{C21DA0C0-C9E8-4C6F-B51F-2D5728F24E1E}">
+											<Language>SFX</Language>
+											<AudioFile>animC2_reverse.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="954903155"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="TimeDirection" ID="{2386AC03-9D55-4BDA-A24E-3CBA160F94CF}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Forwards" ID="{EED17E86-F367-4370-92C8-8A0C6FB4BDB0}"/>
+												<CustomState Name="" ID="{7570033A-7BAE-40D6-8CC3-137183F1F871}" ShortID="474744370">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Backwards" ID="{72FBAE06-3930-45FE-B1EA-AFBE28C0182F}"/>
+												<CustomState Name="" ID="{E8EA1556-3079-40B2-A695-3DA6C0726E2E}" ShortID="501464799"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="animC2_reverse" ID="{C21DA0C0-C9E8-4C6F-B51F-2D5728F24E1E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ambience" ID="{0D00E5A1-0579-446E-B807-A773EC1B52E9}" ShortID="851632229">

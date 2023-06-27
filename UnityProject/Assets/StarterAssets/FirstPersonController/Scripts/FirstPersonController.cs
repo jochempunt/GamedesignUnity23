@@ -327,18 +327,18 @@ namespace StarterAssets
             float radius = currentBubble.transform.localScale.x / 2;
 
             float distance = Vector3.Distance(playerPos, bubbleCenter);
-            float maxDistance = radius * 0.85f; // 85% of the radius
+           
 
-            float mix = 1f;
+          
 
-            if (distance > maxDistance)
+            if (radius >= distance)
             {
-                float distanceBeyondThreshold = distance - maxDistance;
-                float fadePercentage = distanceBeyondThreshold / (radius - maxDistance);
-                mix = Mathf.Lerp(1f, 0f, fadePercentage);
+                timeController.playerIsInBubble = true;
+                return;
             }
 
-            inBubble.SetGlobalValue(mix);
+            timeController.playerIsInBubble = false;
+            
 
         }
 

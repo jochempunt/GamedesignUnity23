@@ -94,69 +94,91 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
-						<Folder Name="Woman_Standing" ID="{6EB457B8-1960-4227-A3D8-BC3FA539310E}" ShortID="914888869">
+						<Folder Name="C1" ID="{52C8E5F2-E4B1-4271-A43B-69BB1A67CB2C}" ShortID="171290637">
 							<ChildrenList>
-								<Event Name="Play_VoiceClipFemale" ID="{32F248A0-A36D-49C2-94F4-9FDEA37BA630}">
+								<Event Name="Play_animC1" ID="{84B80AFC-80AE-4563-8019-FA6671443659}">
 									<ChildrenList>
-										<Action Name="" ID="{8EEF9705-5871-4302-A3D7-500D6ED06B0D}" ShortID="125542972">
+										<Action Name="" ID="{7BBB80C1-3E77-4676-AC8F-39B07B5ABAF9}" ShortID="1047004062">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="VoiceClipFemale_Reverse" ID="{96556D5A-C3FD-4B74-B482-4E0B3A11E9B9}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+													<ObjectRef Name="animC1_forwards" ID="{56EBCA3F-E075-4021-BDA4-7BC190A80B14}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
-										<Action Name="" ID="{A4728898-34D6-4212-85CC-5818C8A63C71}" ShortID="387008789">
+										<Action Name="" ID="{00D4F33D-8119-42E9-98C5-C9132E773516}" ShortID="995007532">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="VoiceClipFemale_S08CT_270(1)" ID="{C2EB3E0D-8C76-4FE2-A76E-679A588A9104}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+													<ObjectRef Name="animC1_reverse" ID="{5C0D1677-7881-4B27-9CFE-32065C44348E}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Pause_VoiceClipFemale" ID="{69585CF9-FA11-4C54-B406-0C0A0A9D3D47}">
+								<Event Name="Pause_animC1" ID="{657A0665-8C52-4D24-BB0A-3E6E10F8CE6A}">
 									<ChildrenList>
-										<Action Name="" ID="{EFCEC8C1-F19F-4532-8E80-29849AEB3E9C}" ShortID="548855038">
+										<Action Name="" ID="{D87E77DD-41DF-4462-AFF6-167BA43C4165}" ShortID="671113005">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="7"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="VoiceClipFemale_Reverse" ID="{96556D5A-C3FD-4B74-B482-4E0B3A11E9B9}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+													<ObjectRef Name="animC1_forwards" ID="{56EBCA3F-E075-4021-BDA4-7BC190A80B14}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
-										<Action Name="" ID="{FF834598-1B76-4F80-B5C8-0780079C2100}" ShortID="807258712">
+										<Action Name="" ID="{1FB2396D-D7E8-4E5C-AE1C-B21F3B989582}" ShortID="127054944">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="7"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="VoiceClipFemale_S08CT_270(1)" ID="{C2EB3E0D-8C76-4FE2-A76E-679A588A9104}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+													<ObjectRef Name="animC1_reverse" ID="{5C0D1677-7881-4B27-9CFE-32065C44348E}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Resume_VoiceClipFemale_02" ID="{6E3AFDD3-C1AF-46A8-9771-1A28D370F47A}">
+							</ChildrenList>
+						</Folder>
+						<Folder Name="C2" ID="{FA829FC4-B56E-4F57-8F5A-3D0DEB2BB655}" ShortID="459186279">
+							<ChildrenList>
+								<Event Name="Play_animC2" ID="{619450B2-DFBC-47C1-B7ED-06955ACC4EF6}">
 									<ChildrenList>
-										<Action Name="" ID="{68A0DBED-A46B-43DD-B412-18288A83BFD4}" ShortID="683723168">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="9"/>
-											</PropertyList>
+										<Action Name="" ID="{DA618A56-EB4B-44BD-9AA1-35F07437C066}" ShortID="486733245">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="VoiceClipFemale_Reverse" ID="{96556D5A-C3FD-4B74-B482-4E0B3A11E9B9}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+													<ObjectRef Name="animC2_forwards" ID="{AE4FCA75-4141-4A93-BC3A-A04E4B6F3E84}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
-										<Action Name="" ID="{CD783FB3-590F-46ED-8FAA-AE323C662F5D}" ShortID="808802391">
+										<Action Name="" ID="{76EC8D6E-AFE3-473C-8F38-A684E9E2CAE0}" ShortID="685353246">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="animC2_reverse" ID="{50FAD4AE-A60F-421C-833C-F4C8A62B71FD}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Pause_animC2" ID="{D6C1478E-6EFE-46EE-9B0A-F6084EFAEAED}">
+									<ChildrenList>
+										<Action Name="" ID="{21E2EC4A-9AA6-4DB9-A005-C679B7ECA3DF}" ShortID="539458920">
 											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="9"/>
+												<Property Name="ActionType" Type="int16" Value="7"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="VoiceClipFemale_S08CT_270(1)" ID="{C2EB3E0D-8C76-4FE2-A76E-679A588A9104}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+													<ObjectRef Name="animC2_forwards" ID="{AE4FCA75-4141-4A93-BC3A-A04E4B6F3E84}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{0B076EC6-C3C8-44FD-AA69-0DF1CAAB4161}" ShortID="388913563">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="7"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="animC2_reverse" ID="{50FAD4AE-A60F-421C-833C-F4C8A62B71FD}" WorkUnitID="{97DE08BF-6BCF-43F9-B211-5D9FD73CF395}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

@@ -1,13 +1,14 @@
 Event	ID	Name			Wwise Object Path	Notes
 	701998974	Pause_Voice_Male			\Default Work Unit\Animations\Man_Falling\Pause_Voice_Male	
-	858333638	Play_VoiceClipFemale			\Default Work Unit\Animations\Woman_Standing\Play_VoiceClipFemale	
-	968487436	Pause_VoiceClipFemale			\Default Work Unit\Animations\Woman_Standing\Pause_VoiceClipFemale	
 	1338641808	Play_Voice_Male			\Default Work Unit\Animations\Man_Falling\Play_Voice_Male	
+	1479049909	Play_animC1			\Default Work Unit\Animations\C1\Play_animC1	
+	1479049910	Play_animC2			\Default Work Unit\Animations\C2\Play_animC2	
 	2735935537	Pause_Music			\Default Work Unit\music\Pause_Music	
+	2739188640	Pause_animC2			\Default Work Unit\Animations\C2\Pause_animC2	
+	2739188643	Pause_animC1			\Default Work Unit\Animations\C1\Pause_animC1	
 	2932040671	Play_Music			\Default Work Unit\music\Play_Music	
 	2940177080	Resume_Music			\Default Work Unit\music\Resume_Music	
 	3341998997	Play_background_drone			\Default Work Unit\Play_background_drone	
-	3435969486	Resume_VoiceClipFemale_02			\Default Work Unit\Animations\Woman_Standing\Resume_VoiceClipFemale_02	
 	3779043801	Resume_Voice_Male			\Default Work Unit\Animations\Man_Falling\Resume_Voice_Male	
 	3854155799	Play_footsteps			\Default Work Unit\Play_footsteps	
 
@@ -20,10 +21,12 @@ State	ID	Name	State Group			Notes
 	3876169137	Backwards	TimeDirection			
 
 Custom State	ID	Name	State Group	Owner		Notes
-	269269303	Forwards	TimeDirection	\Actor-Mixer Hierarchy\TransferUnit\Animations\Woman-Standing\VoiceClipFemale_Reverse		
-	309004442	Backwards	TimeDirection	\Actor-Mixer Hierarchy\TransferUnit\Animations\Woman-Standing\VoiceClipFemale_S08CT_270(1)		
 	409662005	Forwards	TimeDirection	\Actor-Mixer Hierarchy\TransferUnit\Animations\Man-Falling\Voice,Male,Screams,Falling_reverse		
+	474744370	Forwards	TimeDirection	\Actor-Mixer Hierarchy\TransferUnit\Animations\C2\animC2_reverse		
+	606915634	Backwards	TimeDirection	\Actor-Mixer Hierarchy\TransferUnit\Animations\C2\animC2_forwards		
 	612295937	Backwards	TimeDirection	\Actor-Mixer Hierarchy\TransferUnit\Animations\Man-Falling\Voice,Male,Screams,Falling,x3		
+	882668206	Backwards	TimeDirection	\Actor-Mixer Hierarchy\TransferUnit\Animations\C1\animC1_forwards		
+	901240278	Forwards	TimeDirection	\Actor-Mixer Hierarchy\TransferUnit\Animations\C1\animC1_reverse		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2394225038	inBubble			\Default Work Unit\inBubble	
@@ -35,23 +38,27 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 Effect plug-ins	ID	Name	Type				Notes
 	39972348	Time Stretch (Custom)	Wwise Time Stretch			
+	323871095	Time Stretch (Custom)	Wwise Time Stretch			
 	383180350	Compressor (Custom)	Wwise Compressor			
-	443472196	Time Stretch (Custom)	Wwise Time Stretch			
 	461348081	Parametric EQ (Custom)	Wwise Parametric EQ			
 	699616293	RoomVerb (Custom)	Wwise RoomVerb			
-	842723221	Time Stretch (Custom)	Wwise Time Stretch			
+	770322671	Time Stretch (Custom)	Wwise Time Stretch			
+	825980683	Time Stretch (Custom)	Wwise Time Stretch			
 	877306645	Time Stretch (Custom)	Wwise Time Stretch			
+	1038568045	Time Stretch (Custom)	Wwise Time Stretch			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	73597863	Voice,Male,Screams,Falling_reverse	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\Voice,Male,Screams,Falling_reverse_5s_10C4C929.wem		\Actor-Mixer Hierarchy\TransferUnit\Animations\Man-Falling\Voice,Male,Screams,Falling_reverse		960096
+	94988592	animC2_forwards	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\animC2_forwards_10C4C929.wem		\Actor-Mixer Hierarchy\TransferUnit\Animations\C2\animC2_forwards		3840096
 	153254124	Voice,Male,Screams,Falling,x3	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\Voice,Male,Screamsx3_5s_10C4C929.wem		\Actor-Mixer Hierarchy\TransferUnit\Animations\Man-Falling\Voice,Male,Screams,Falling,x3		960096
 	170846438	BootsSteps_2	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\BootsSteps_2_8843C7A6.wem		\Actor-Mixer Hierarchy\TransferUnit\footsteps\BootsSteps_2		139468
-	239731172	VoiceClipFemale_Reverse	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\VoiceClipFemale_Reverse_5s_10C4C929.wem		\Actor-Mixer Hierarchy\TransferUnit\Animations\Woman-Standing\VoiceClipFemale_Reverse		960096
-	247336597	VoiceClipFemale_S08CT_270(1)	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\VoiceClipFemale_5s_10C4C929.wem		\Actor-Mixer Hierarchy\TransferUnit\Animations\Woman-Standing\VoiceClipFemale_S08CT_270(1)		960096
+	173129455	animC1_forwards	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\animC1_forwards_10C4C929.wem		\Actor-Mixer Hierarchy\TransferUnit\Animations\C1\animC1_forwards		3840096
 	359638242	Long term dusk glimpses - The Caretaker (Stage 3)	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\Long term dusk glimpses - The Caretaker (Stage 3)_10C4C929.wem		\Actor-Mixer Hierarchy\TransferUnit\Ambience\Music\Long term dusk glimpses - The Caretaker (Stage 3)		41082700
+	509806757	animC1_reverse	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\animC1_reverse_10C4C929.wem		\Actor-Mixer Hierarchy\TransferUnit\Animations\C1\animC1_reverse		3840096
 	518727250	Last moments of pure recall - The Caretaker (Stage 2)	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\Last moments of pure recall - The Caretaker (Stage 2)_10C4C929.wem		\Actor-Mixer Hierarchy\TransferUnit\Ambience\Music\Last moments of pure recall - The Caretaker (Stage 2)		44738448
 	723331677	Childishly Fresh Eyes - The Caretaker (Stage 1)	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\Childishly Fresh Eyes - The Caretaker (Stage 1)_10C4C929.wem		\Actor-Mixer Hierarchy\TransferUnit\Ambience\Music\Childishly Fresh Eyes - The Caretaker (Stage 1)		34243772
 	826189689	background_drone	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\DroneFactorySpooky_S011SSFX.74_A8666401.wem		\Actor-Mixer Hierarchy\TransferUnit\Ambience\background_drone		46624476
+	954903155	animC2_reverse	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\animC2_reverse_10C4C929.wem		\Actor-Mixer Hierarchy\TransferUnit\Animations\C2\animC2_reverse		3840096
 	967315530	Quiet dusk coming early - The Caretaker (Stage 2)	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\Quiet dusk coming early - The Caretaker (Stage 2)_10C4C929.wem		\Actor-Mixer Hierarchy\TransferUnit\Ambience\Music\Quiet dusk coming early - The Caretaker (Stage 2)		41680104
 	984782743	BootsSteps_1	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\BootsSteps_1_9353A7F2.wem		\Actor-Mixer Hierarchy\TransferUnit\footsteps\BootsSteps_1		75272
 	1042045071	BootsSteps_3	C:\Users\joche\Documents\Studium\6Semester\GamedesingWorkshop\GamedesignUnity23\UnityProject\UnityProject_WwiseProject\.cache\Windows\SFX\BootsSteps_3_C2C8EF14.wem		\Actor-Mixer Hierarchy\TransferUnit\footsteps\BootsSteps_3		102088

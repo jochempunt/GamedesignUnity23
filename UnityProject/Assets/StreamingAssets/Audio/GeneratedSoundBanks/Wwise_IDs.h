@@ -13,17 +13,18 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PAUSE_ANIMC1 = 2739188643U;
+        static const AkUniqueID PAUSE_ANIMC2 = 2739188640U;
         static const AkUniqueID PAUSE_MUSIC = 2735935537U;
         static const AkUniqueID PAUSE_VOICE_MALE = 701998974U;
-        static const AkUniqueID PAUSE_VOICECLIPFEMALE = 968487436U;
+        static const AkUniqueID PLAY_ANIMC1 = 1479049909U;
+        static const AkUniqueID PLAY_ANIMC2 = 1479049910U;
         static const AkUniqueID PLAY_BACKGROUND_DRONE = 3341998997U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_VOICE_MALE = 1338641808U;
-        static const AkUniqueID PLAY_VOICECLIPFEMALE = 858333638U;
         static const AkUniqueID RESUME_MUSIC = 2940177080U;
         static const AkUniqueID RESUME_VOICE_MALE = 3779043801U;
-        static const AkUniqueID RESUME_VOICECLIPFEMALE_02 = 3435969486U;
     } // namespace EVENTS
 
     namespace STATES
